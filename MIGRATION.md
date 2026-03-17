@@ -1,0 +1,118 @@
+# YPN Group — Site Migration Plan
+
+## Overview
+
+We are migrating the YPN Group website from a WordPress-derived static HTML export to a clean, lightweight, AI-maintainable stack based on Hugo.
+
+**Current state:** Static HTML files exported from WordPress via Simply Static, hosted on Netlify. HTML is messy with WordPress/plugin artifacts. No build process.
+
+**Target state:** Hugo-generated static site, content in Markdown with YAML front matter, hosted on Netlify. Build command: `hugo`.
+
+---
+
+## Target Stack
+
+| Layer | Choice | Reason |
+|-------|--------|--------|
+| Static site generator | **Hugo** | Fastest builds, zero runtime dependencies (single binary), AI-friendly content model |
+| Content format | **Markdown + YAML front matter** | Plain text, trivially readable and writable by AI agents |
+| Templating | **Hugo templates (Go HTML templates)** | No framework overhead |
+| CSS | **Tailwind CSS** | Utility-first, easy to reason about and instruct an AI to modify |
+| Forms | **Netlify Forms** | Already in use, keep as-is |
+| Hosting | **Netlify** | Already in use, free tier sufficient |
+| Source control | **Git (GitHub)** | Deployment trigger, source of truth |
+| CMS | None needed | AI agent edits Markdown files directly |
+
+No Node runtime in production. No database. No CMS backend.
+
+---
+
+## Content Model
+
+```
+content/
+  _index.md              # Homepage
+  blogg/
+    <slug>.md            # Blog posts (currently spread across /2024/, /2025/ dirs)
+  sider/
+    kontakt-oss.md
+    privacy-policy.md
+    personvernerklaering.md
+  events/
+  storytelling/
+  students/
+  business/
+```
+
+Each content file uses YAML front matter:
+
+```yaml
+---
+title: "Post title"
+date: 2024-09-18
+author: "Author Name"
+categories: ["Young Leaders"]
+tags: ["OBOS", "Young Professionals"]
+featured_image: "/uploads/2024/09/image.jpg"
+---
+
+Post body in Markdown...
+```
+
+---
+
+## What to Preserve
+
+- **`/wp-content/uploads/`** — all images referenced by content; keep in place or move to `/static/uploads/`
+- **URL structure** — Hugo's `permalinks` config can match the existing `/2024/09/18/post-slug/` pattern to avoid breaking links
+- **Netlify form markup** — copy directly from `kontakt-oss/index.html`
+- **Fonts** — Open Sans 400 (body), Poppins 600/700 (headings) via Google Fonts
+
+---
+
+## Authentication / Member Pages
+
+The current site uses Ultimate Member (WordPress plugin) for login, registration, and user profiles. These pages (`/login/`, `/register/`, `/user/`, `/author/`) are kept as static HTML for now.
+
+**Decision deferred.** Options when ready:
+- **Netlify Identity** — free tier (1000 users), lowest friction given existing Netlify hosting
+- **Keep existing static pages** — already functional, no action needed short-term
+- **Remove member features** — if the networking is moving to Slack/external platform
+
+---
+
+## Migration Phases
+
+### Phase 1 — Scaffold Hugo project
+- Initialize Hugo project in repo
+- Set up Tailwind CSS
+- Migrate homepage and main navigation
+- Deploy to Netlify with `hugo` build command
+
+### Phase 2 — Migrate blog content
+- Convert blog posts to Markdown files under `content/blogg/`
+- Configure permalinks to preserve existing URLs (`/2024/09/18/slug/`)
+- Set up list and single post templates
+
+### Phase 3 — Migrate static pages
+- Contact page (`kontakt-oss`) with Netlify form
+- Privacy policy, other informational pages
+
+### Phase 4 — Auth decision
+- Evaluate whether login/registration/profiles are needed
+- If yes: implement Netlify Identity
+- If no: remove or redirect those pages
+
+### Phase 5 — Cleanup
+- Archive or remove `wp-content/plugins/`, `wp-content/themes/`
+- Keep `wp-content/uploads/` or move images to `static/uploads/`
+- Set up Netlify redirects for any changed URLs
+
+---
+
+## Design Notes
+
+- **Color scheme:** Yellow/black (YPN brand)
+- **Typography:** Open Sans (body), Poppins (headings)
+- **Icons:** FontAwesome (currently loaded from local `wp-content/` — move to CDN or replace)
+- **Language:** Norwegian (nb-NO) primary
