@@ -2,15 +2,15 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Status: Migration in progress
+## Status: Phase 1 complete — Hugo scaffold live
 
 This repo is being migrated from a WordPress static HTML export to a Hugo-based site. See `MIGRATION.md` for the full plan and rationale.
 
-**Current state:** Static HTML files exported from WordPress, hosted on Netlify. No build step — HTML is edited directly.
+**Current state:** Hugo scaffold is live. Homepage and contact page are Hugo-rendered. All legacy WordPress HTML has been moved to `static/` so legacy URLs continue to work. Build command: `hugo`.
 
 **Target state:** Hugo + Tailwind CSS + Markdown content, deployed to Netlify via `hugo` build command.
 
-Work is being done incrementally. Both old (WordPress HTML) and new (Hugo) content may coexist during the transition.
+Work is being done incrementally. Legacy HTML in `static/` and new Hugo content coexist during the transition.
 
 ---
 
