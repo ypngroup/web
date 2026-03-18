@@ -33,3 +33,13 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
   name = "Kontakt oss"
   url = "/kontakt-oss/"
   weight = 3
+
+[[menus.main]]
+  name = "Business"
+  url = "/business/"
+  weight = 4
+
+[[menus.main]]
+  name = "Network"
+  url = "/network/"
+  weight = 5
