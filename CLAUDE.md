@@ -2,11 +2,11 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Status: Phase 1 complete — Hugo scaffold live
+## Status: Phase 3 complete — main pages migrated
 
 This repo is being migrated from a WordPress static HTML export to a Hugo-based site. See `MIGRATION.md` for the full plan and rationale.
 
-**Current state:** Hugo scaffold is live. Homepage and contact page are Hugo-rendered. All legacy WordPress HTML has been moved to `static/` so legacy URLs continue to work. Build command: `hugo`.
+**Current state:** Hugo manages the homepage, contact page, blog posts, business page, network page, privacy policy, and personvernerklaering. Remaining legacy static HTML covers auth pages only (`/login/`, `/register/`). Build command: `hugo`.
 
 **Target state:** Hugo + Tailwind CSS + Markdown content, deployed to Netlify via `hugo` build command.
 
@@ -18,14 +18,17 @@ Work is being done incrementally. Legacy HTML in `static/` and new Hugo content 
 
 ### Architecture
 
-- Hugo owns `/` (homepage) and `/kontakt-oss/` — edit via `layouts/` and `content/`
-- All other legacy WordPress HTML lives in `static/` — Hugo copies it verbatim into `public/`, preserving all URLs
+- Hugo owns all main pages — edit via `layouts/` and `content/`
+- Remaining legacy WordPress HTML in `static/` covers auth pages only (`/login/`, `/register/`)
 - WordPress images remain at `static/wp-content/uploads/` and are referenced directly in templates
-- Homepage content is hardcoded in `layouts/index.html` (not front-matter-driven)
+- Homepage and rich pages (business, network) have content hardcoded in their `list.html` templates
+- Simple text pages (privacy-policy, personvernerklaering) have content in `_index.md` Markdown files
 
 ### Forms
 
-Forms use **Netlify Forms**: `data-netlify="true"` on the `<form>` element plus a hidden `<input type="hidden" name="form-name">` field. No backend needed. The contact form is in `layouts/kontakt-oss/list.html`.
+Forms use **Netlify Forms**: `data-netlify="true"` on the `<form>` element plus a hidden `<input type="hidden" name="form-name">` field. No backend needed.
+- Contact form: `layouts/kontakt-oss/list.html`
+- Network signup form: `layouts/network/list.html` (form name: `network-signup`)
 
 ### Key pages
 
@@ -33,9 +36,12 @@ Forms use **Netlify Forms**: `data-netlify="true"` on the `<form>` element plus 
 |------|-------|-------------|
 | `/` | Hugo | `layouts/index.html` |
 | `/kontakt-oss/` | Hugo | `layouts/kontakt-oss/list.html` + `content/kontakt-oss/_index.md` |
+| `/business/` | Hugo | `layouts/business/list.html` + `content/business/_index.md` |
+| `/network/` | Hugo | `layouts/network/list.html` + `content/network/_index.md` |
+| `/privacy-policy/` | Hugo | `layouts/privacy-policy/list.html` + `content/privacy-policy/_index.md` |
+| `/personvernerklaering/` | Hugo | `layouts/personvernerklaering/list.html` + `content/personvernerklaering/_index.md` |
 | `/register/` | Legacy static | `static/register/index.html` |
 | `/login/` | Legacy static | `static/login/index.html` |
-| `/privacy-policy/` | Legacy static | `static/privacy-policy/index.html` |
 
 ---
 

@@ -31,17 +31,19 @@ No Node runtime in production. No database. No CMS backend.
 
 ```
 content/
-  _index.md              # Homepage
+  _index.md                    # Homepage
   blogg/
-    <slug>.md            # Blog posts (currently spread across /2024/, /2025/ dirs)
-  sider/
-    kontakt-oss.md
-    privacy-policy.md
-    personvernerklaering.md
-  events/
-  storytelling/
-  students/
+    <slug>.md                  # Blog posts
+  kontakt-oss/
+    _index.md                  # Contact page
   business/
+    _index.md                  # Business page
+  network/
+    _index.md                  # Network page
+  privacy-policy/
+    _index.md                  # Privacy policy (EN)
+  personvernerklaering/
+    _index.md                  # Personvernerklæring (NO)
 ```
 
 Each content file uses YAML front matter:
@@ -103,9 +105,14 @@ The current site uses Ultimate Member (WordPress plugin) for login, registration
 - `static/2024/04/15/ypn-blog/` — trivial placeholder page, no real content; can be deleted or redirected to `/blogg/` once static cleanup phase begins
 - `static/2024/11/24/let-ai-run-the-show/` — login redirect page (Ultimate Member artifact); fate tied to Phase 4 auth decision
 
-### Phase 3 — Migrate static pages
-- Contact page (`kontakt-oss`) with Netlify form
-- Privacy policy, other informational pages
+### Phase 3 — Migrate static pages ✓ Complete
+- Privacy policy (`/privacy-policy/`) — Markdown content, navy hero template
+- Personvernerklaering (`/personvernerklaering/`) — Markdown content, 8-section Norwegian privacy declaration
+- Business (`/business/`) — hardcoded template, 4 sections with images, workshop steps, service cards
+- Network (`/network/`) — hardcoded template, hero, Netlify signup form, benefits grid, photo gallery
+- Business + Network added to main navigation
+
+**Removed legacy static HTML:** `static/business/`, `static/network/`, `static/personvernerklaering/`, `static/privacy-policy/`
 
 ### Phase 4 — Auth decision
 - Evaluate whether login/registration/profiles are needed
