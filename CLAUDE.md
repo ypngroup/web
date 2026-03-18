@@ -90,8 +90,22 @@ These conventions are derived from the live site at youngprofessionalsnorway.no 
 | Buttons | `font-heading font-normal uppercase tracking-wider px-8 py-4 text-base` — not semibold, not small |
 | Section padding | `py-20` on content sections; `py-28` on full-bleed photo CTA sections |
 | Fonts loaded | Open Sans 400, Poppins 300/600/700 (all three weights needed) |
-| Hero overlay | `linear-gradient(135deg, rgba(11,27,48,0.53) 23%, rgba(36,106,130,0.61) 94%)` — extracted from live site stylesheet; applied via inline `style=` on the overlay `<div>` |
-| Photo CTA overlay (Brundtland) | `rgba(16,16,81,0.04)` — near-invisible tint; applied via inline `style=` on the overlay `<div>` |
+| Hero overlay | `linear-gradient(135deg, rgba(11,27,48,0.53) 23%, rgba(36,106,130,0.61) 94%)` — extracted from live site stylesheet |
+| Photo CTA overlay (Brundtland) | `rgba(16,16,81,0.04)` — near-invisible tint |
+
+### Photo background sections
+
+Full-bleed background image sections use the `photo-bg` partial, which renders the image div and overlay div:
+
+```html
+{{/* Default overlay — hero gradient */}}
+{{ partial "photo-bg" (dict "image" "/wp-content/uploads/path/to/image.jpg") }}
+
+{{/* Custom overlay */}}
+{{ partial "photo-bg" (dict "image" "/wp-content/uploads/path/to/image.jpg" "overlay" "rgba(16, 16, 81, 0.04)") }}
+```
+
+The `overlay` param accepts any CSS `background` value. Omitting it defaults to the hero gradient. **Always use this partial** — do not write the two `<div>`s by hand. Hugo sanitizes raw CSS strings passed through template dicts (`ZgotmplZ`); the partial handles this correctly via `safeCSS`.
 
 ### Permalinks
 
