@@ -1,0 +1,35 @@
+{{ define "main" }}
+<section class="bg-brand-navy pt-32 pb-12">
+  <div class="max-w-6xl mx-auto px-4">
+    <h1 class="font-heading font-semibold text-4xl md:text-5xl leading-tight text-white">Blogg</h1>
+    <p class="text-white/70 mt-3 leading-relaxed">Artikler, intervjuer og suksesshistorier fra YPN-nettverket.</p>
+  </div>
+</section>
+
+<section class="bg-white text-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{ range .Pages }}
+      {{ $post := . }}
+      <article class="flex flex-col bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+        {{ with .Params.featured_image }}
+        <a href="{{ $post.RelPermalink }}" class="block overflow-hidden">
+          <img src="{{ . }}" alt="{{ $post.Title }}" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300">
+        </a>
+        {{ else }}
+        <div class="w-full h-48 bg-brand-navy"></div>
+        {{ end }}
+        <div class="p-6 flex flex-col flex-1">
+          <p class="text-xs font-heading uppercase tracking-widest text-gray-400 mb-2">{{ .Date.Format "2. January 2006" }}</p>
+          <h2 class="font-heading font-semibold text-xl leading-tight mb-3">
+            <a href="{{ .RelPermalink }}" class="hover:text-yellow-600 transition-colors">{{ .Title }}</a>
+          </h2>
+          <p class="text-gray-600 leading-relaxed text-sm flex-1">{{ with .Params.description }}{{ . }}{{ else }}{{ .Summary }}{{ end }}</p>
+          <a href="{{ .RelPermalink }}" class="mt-5 self-start font-heading font-normal uppercase tracking-wider text-xs text-brand-navy hover:text-yellow-600 transition-colors">Les mer &rarr;</a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

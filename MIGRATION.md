@@ -89,10 +89,19 @@ The current site uses Ultimate Member (WordPress plugin) for login, registration
 - Migrate homepage and main navigation
 - Deploy to Netlify with `hugo` build command
 
-### Phase 2 — Migrate blog content
+### Phase 2 — Migrate blog content ✓ Complete
 - Convert blog posts to Markdown files under `content/blogg/`
 - Configure permalinks to preserve existing URLs (`/2024/09/18/slug/`)
 - Set up list and single post templates
+
+**Migrated posts:**
+- `content/blogg/pimp-my-ppt.md` → `/2024/04/15/pimp-my-ppt-presentation-hackathon-.../`
+- `content/blogg/stretch-engage.md` → `/2024/04/27/stretch-engage-en-suksesshistorie-om-brobygging/`
+- `content/blogg/obos-daniel-siraj.md` → `/2024/09/18/fra-advokatfullmektig-til-konsernsjef-i-norges-storste-boligbyggelag-obos/`
+
+**Kept as static (address in a later phase):**
+- `static/2024/04/15/ypn-blog/` — trivial placeholder page, no real content; can be deleted or redirected to `/blogg/` once static cleanup phase begins
+- `static/2024/11/24/let-ai-run-the-show/` — login redirect page (Ultimate Member artifact); fate tied to Phase 4 auth decision
 
 ### Phase 3 — Migrate static pages
 - Contact page (`kontakt-oss`) with Netlify form
