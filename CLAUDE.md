@@ -14,34 +14,28 @@ Work is being done incrementally. Legacy HTML in `static/` and new Hugo content 
 
 ---
 
-## Current repo (WordPress static export)
+## Current repo (Hugo + legacy static)
 
 ### Architecture
 
-- Every page is a directory containing an `index.html` file
-- Static assets (WordPress CSS/JS/images) live under `wp-content/`
-- User and author archive pages are pre-generated under `user/` and `author/` — these are legacy, not actively maintained
-- Page builder markup follows Beaver Builder conventions: `fl-row`, `fl-col`, `fl-module`
+- Hugo owns `/` (homepage) and `/kontakt-oss/` — edit via `layouts/` and `content/`
+- All other legacy WordPress HTML lives in `static/` — Hugo copies it verbatim into `public/`, preserving all URLs
+- WordPress images remain at `static/wp-content/uploads/` and are referenced directly in templates
+- Homepage content is hardcoded in `layouts/index.html` (not front-matter-driven)
 
 ### Forms
 
-Forms use **Netlify Forms**: `data-netlify="true"` on the `<form>` element plus a hidden `<input type="hidden" name="form-name">` field. No backend needed.
+Forms use **Netlify Forms**: `data-netlify="true"` on the `<form>` element plus a hidden `<input type="hidden" name="form-name">` field. No backend needed. The contact form is in `layouts/kontakt-oss/list.html`.
 
 ### Key pages
 
-| Path | Purpose |
-|------|---------|
-| `index.html` | Homepage |
-| `kontakt-oss/index.html` | Contact page (Netlify form) |
-| `register/index.html` | Registration |
-| `login/index.html` | Login |
-| `privacy-policy/index.html` | Privacy policy |
-
-### Working with legacy HTML
-
-- Edit HTML files directly — no compilation
-- Primary language is Norwegian (nb-NO)
-- When removing WordPress artifacts, check for inline `<script>` blocks referencing removed plugins before deleting markup
+| Path | Owner | How to edit |
+|------|-------|-------------|
+| `/` | Hugo | `layouts/index.html` |
+| `/kontakt-oss/` | Hugo | `layouts/kontakt-oss/list.html` + `content/kontakt-oss/_index.md` |
+| `/register/` | Legacy static | `static/register/index.html` |
+| `/login/` | Legacy static | `static/login/index.html` |
+| `/privacy-policy/` | Legacy static | `static/privacy-policy/index.html` |
 
 ---
 
@@ -82,8 +76,9 @@ featured_image: "/uploads/2024/09/image.jpg"
 ### Templates and styles
 
 - Templates live in `layouts/`
-- Tailwind CSS — edit `assets/css/main.css` and use utility classes in templates
-- Images from the WordPress era are in `wp-content/uploads/` (or will be moved to `static/uploads/`)
+- Tailwind CSS via Play CDN (`<script src="https://cdn.tailwindcss.com">`) — no build step, no `assets/css/main.css`. Use utility classes directly in templates.
+- Custom fonts (Open Sans, Poppins) and brand colors configured in the Tailwind config script in `layouts/partials/head.html`
+- Images from the WordPress era are at `static/wp-content/uploads/` and referenced with `/wp-content/uploads/...` paths
 
 ### Permalinks
 
