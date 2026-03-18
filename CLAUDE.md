@@ -8,6 +8,8 @@ The migration from WordPress static HTML export to Hugo is complete. See `MIGRAT
 
 **Current state:** Hugo manages all pages. No legacy static HTML remains. WordPress plugin/theme directories removed. All auth pages removed and redirected. Build command: `hugo`.
 
+**Business and Network pages are drafts** — set to `draft: true` in their `_index.md` and removed from the nav in `hugo.toml`. They are excluded from production builds and will be revamped in a separate branch. To work on them locally: `hugo server --buildDrafts`. To re-publish: remove `draft: true` and re-add the menu entries in `hugo.toml`.
+
 ---
 
 ## Architecture
