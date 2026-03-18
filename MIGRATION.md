@@ -85,7 +85,7 @@ The current site uses Ultimate Member (WordPress plugin) for login, registration
 
 ## Migration Phases
 
-### Phase 1 — Scaffold Hugo project
+### Phase 1 — Scaffold Hugo project ✓ Complete
 - Initialize Hugo project in repo
 - Set up Tailwind CSS
 - Migrate homepage and main navigation
