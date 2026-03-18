@@ -80,6 +80,20 @@ featured_image: "/uploads/2024/09/image.jpg"
 - Custom fonts (Open Sans, Poppins) and brand colors configured in the Tailwind config script in `layouts/partials/head.html`
 - Images from the WordPress era are at `static/wp-content/uploads/` and referenced with `/wp-content/uploads/...` paths
 
+### Design conventions (match live site)
+
+These conventions are derived from the live site at youngprofessionalsnorway.no and must be followed when editing templates:
+
+| Element | Convention |
+|---------|------------|
+| Section headings (H2) | `font-heading font-semibold text-4xl md:text-5xl leading-tight` — **not** bold (700), not small |
+| Focus area / sub-headings (H3) | `font-heading font-semibold text-2xl` |
+| Brundtland CTA heading | `font-heading font-light text-3xl md:text-5xl` — light weight (300) for contrast |
+| Body text | `leading-relaxed` on all `<p>` — base font is 15px / line-height 1.857 |
+| Buttons | `font-heading font-normal uppercase tracking-wider px-8 py-4 text-base` — not semibold, not small |
+| Section padding | `py-20` on content sections; `py-28` on full-bleed photo CTA sections |
+| Fonts loaded | Open Sans 400, Poppins 300/600/700 (all three weights needed) |
+
 ### Permalinks
 
 Hugo is configured to preserve the original WordPress URL structure for blog posts (`/2024/09/18/slug/`) to avoid breaking existing links.
