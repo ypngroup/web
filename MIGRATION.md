@@ -120,10 +120,13 @@ The current site uses Ultimate Member (WordPress plugin) for login, registration
 - Network signup is handled by the Netlify form on `/network/`
 - **TODO:** Recover "Let AI Run the Show" (2024-11-24) post from WordPress database dump and add as `content/blogg/let-ai-run-the-show.md`
 
-### Phase 5 — Cleanup
-- Archive or remove `wp-content/plugins/`, `wp-content/themes/`
-- Keep `wp-content/uploads/` or move images to `static/uploads/`
-- Set up Netlify redirects for any changed URLs
+### Phase 5 — Cleanup ✓ Complete
+- Deleted `static/wp-content/plugins/` (~114 MB), `static/wp-content/themes/` (~11 MB), `static/wp-includes/` (~29 MB)
+- Deleted unused upload subdirs: `ultimatemember/`, `astra-addon/`, `bb-plugin/`, `uag-plugin/`, `2020/`, `2021/`
+- Kept `static/wp-content/uploads/2023/`, `2024/`, `2025/` — referenced by Hugo templates and blog content
+- Deleted 18 legacy static HTML directories (`account/`, `author/`, `category/`, `event/`, `ingen-tittel/`, `let-ai-run-the-show/`, `logout/`, `members/`, `microsoft-university-samling/`, `password-reset/`, `portal-home/`, `storytelling/`, `students/`, `tag/`, `testside/`, `ypn-blogg/`, `ypn-exec-dir-network/`, `ypn-nyhetsbrev/`)
+- Added Netlify 301 redirects: `/author/*` → `/`, `/category/*` → `/blogg/`, `/tag/*` → `/blogg/`, `/event/*` → `/`, `/ypn-blogg/` → `/blogg/`
+- **"Let AI Run the Show" TODO (Phase 4):** No content to recover — the static page was a Beaver Builder event invite with no article prose. TODO closed.
 
 ---
 

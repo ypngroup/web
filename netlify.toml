@@ -26,6 +26,31 @@
   to = "/blogg/"
   status = 301
 
+[[redirects]]
+  from = "/author/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/category/*"
+  to = "/blogg/"
+  status = 301
+
+[[redirects]]
+  from = "/tag/*"
+  to = "/blogg/"
+  status = 301
+
+[[redirects]]
+  from = "/event/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/ypn-blogg/"
+  to = "/blogg/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]
