@@ -2,21 +2,15 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Status: Phase 4 complete — auth pages removed
+## Status: Migration complete — all phases done
 
-This repo is being migrated from a WordPress static HTML export to a Hugo-based site. See `MIGRATION.md` for the full plan and rationale.
+The migration from WordPress static HTML export to Hugo is complete. See `MIGRATION.md` for the full history.
 
-**Current state:** Hugo manages all main pages. Auth pages (`/login/`, `/register/`, `/user/`) have been removed and redirected. No legacy static HTML remains. Build command: `hugo`.
-
-**Target state:** Hugo + Tailwind CSS + Markdown content, deployed to Netlify via `hugo` build command.
-
-Work is being done incrementally. Legacy HTML in `static/` and new Hugo content coexist during the transition.
+**Current state:** Hugo manages all pages. No legacy static HTML remains. WordPress plugin/theme directories removed. All auth pages removed and redirected. Build command: `hugo`.
 
 ---
 
-## Current repo (Hugo)
-
-### Architecture
+## Architecture
 
 - Hugo owns all pages — edit via `layouts/` and `content/`
 - WordPress images remain at `static/wp-content/uploads/` and are referenced directly in templates
@@ -31,20 +25,18 @@ Forms use **Netlify Forms**: `data-netlify="true"` on the `<form>` element plus 
 
 ### Key pages
 
-| Path | Owner | How to edit |
-|------|-------|-------------|
-| `/` | Hugo | `layouts/index.html` |
-| `/kontakt-oss/` | Hugo | `layouts/kontakt-oss/list.html` + `content/kontakt-oss/_index.md` |
-| `/business/` | Hugo | `layouts/business/list.html` + `content/business/_index.md` |
-| `/network/` | Hugo | `layouts/network/list.html` + `content/network/_index.md` |
-| `/privacy-policy/` | Hugo | `layouts/privacy-policy/list.html` + `content/privacy-policy/_index.md` |
-| `/personvernerklaering/` | Hugo | `layouts/personvernerklaering/list.html` + `content/personvernerklaering/_index.md` |
+| Path | How to edit |
+|------|-------------|
+| `/` | `layouts/index.html` |
+| `/kontakt-oss/` | `layouts/kontakt-oss/list.html` + `content/kontakt-oss/_index.md` |
+| `/business/` | `layouts/business/list.html` + `content/business/_index.md` |
+| `/network/` | `layouts/network/list.html` + `content/network/_index.md` |
+| `/privacy-policy/` | `layouts/privacy-policy/list.html` + `content/privacy-policy/_index.md` |
+| `/personvernerklaering/` | `layouts/personvernerklaering/list.html` + `content/personvernerklaering/_index.md` |
 
 ---
 
-## Target repo (Hugo)
-
-### Build
+## Build
 
 ```bash
 hugo          # build to /public
