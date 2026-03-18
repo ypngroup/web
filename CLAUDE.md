@@ -90,6 +90,8 @@ These conventions are derived from the live site at youngprofessionalsnorway.no 
 | Buttons | `font-heading font-normal uppercase tracking-wider px-8 py-4 text-base` — not semibold, not small |
 | Section padding | `py-20` on content sections; `py-28` on full-bleed photo CTA sections |
 | Fonts loaded | Open Sans 400, Poppins 300/600/700 (all three weights needed) |
+| Hero overlay | `linear-gradient(135deg, rgba(11,27,48,0.53) 23%, rgba(36,106,130,0.61) 94%)` — extracted from live site stylesheet; applied via inline `style=` on the overlay `<div>` |
+| Photo CTA overlay (Brundtland) | `rgba(16,16,81,0.04)` — near-invisible tint; applied via inline `style=` on the overlay `<div>` |
 
 ### Permalinks
 
