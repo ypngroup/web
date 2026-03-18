@@ -13,7 +13,7 @@
 
 [[redirects]]
   from = "/register/"
-  to = "/network/"
+  to = "/slack/"
   status = 301
 
 [[redirects]]
