@@ -1,0 +1,17 @@
+{{/*
+  photo-bg: Full-bleed background image with overlay for photo sections.
+
+  Usage:
+    {{ partial "photo-bg" (dict "image" "/path/to/img.jpg" "overlay" "rgba(...)") }}
+
+  Params:
+    image   — URL of the background image (required)
+    overlay — CSS background value for the overlay div (optional, defaults to hero gradient)
+
+  Default overlay is the YPN hero gradient extracted from the live site stylesheet:
+    linear-gradient(135deg, rgba(11,27,48,0.53) 23%, rgba(36,106,130,0.61) 94%)
+*/}}
+{{ $image   := .image }}
+{{ $overlay := .overlay | default "linear-gradient(135deg, rgba(11, 27, 48, 0.53) 23%, rgba(36, 106, 130, 0.61) 94%)" }}
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{{ $image }}');"></div>
+<div class="absolute inset-0" style="background: {{ $overlay | safeCSS }};"></div>
