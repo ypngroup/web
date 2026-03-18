@@ -22,8 +22,13 @@
   status = 301
 
 [[redirects]]
+  from = "/let-ai-run-the-show/"
+  to = "/2024/11/20/let-ai-run-the-show/"
+  status = 301
+
+[[redirects]]
   from = "/2024/11/24/let-ai-run-the-show/"
-  to = "/blogg/"
+  to = "/2024/11/20/let-ai-run-the-show/"
   status = 301
 
 [[redirects]]
