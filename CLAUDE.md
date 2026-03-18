@@ -2,11 +2,11 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## Status: Phase 3 complete — main pages migrated
+## Status: Phase 4 complete — auth pages removed
 
 This repo is being migrated from a WordPress static HTML export to a Hugo-based site. See `MIGRATION.md` for the full plan and rationale.
 
-**Current state:** Hugo manages the homepage, contact page, blog posts, business page, network page, privacy policy, and personvernerklaering. Remaining legacy static HTML covers auth pages only (`/login/`, `/register/`). Build command: `hugo`.
+**Current state:** Hugo manages all main pages. Auth pages (`/login/`, `/register/`, `/user/`) have been removed and redirected. No legacy static HTML remains. Build command: `hugo`.
 
 **Target state:** Hugo + Tailwind CSS + Markdown content, deployed to Netlify via `hugo` build command.
 
@@ -14,12 +14,11 @@ Work is being done incrementally. Legacy HTML in `static/` and new Hugo content 
 
 ---
 
-## Current repo (Hugo + legacy static)
+## Current repo (Hugo)
 
 ### Architecture
 
-- Hugo owns all main pages — edit via `layouts/` and `content/`
-- Remaining legacy WordPress HTML in `static/` covers auth pages only (`/login/`, `/register/`)
+- Hugo owns all pages — edit via `layouts/` and `content/`
 - WordPress images remain at `static/wp-content/uploads/` and are referenced directly in templates
 - Homepage and rich pages (business, network) have content hardcoded in their `list.html` templates
 - Simple text pages (privacy-policy, personvernerklaering) have content in `_index.md` Markdown files
@@ -40,8 +39,6 @@ Forms use **Netlify Forms**: `data-netlify="true"` on the `<form>` element plus 
 | `/network/` | Hugo | `layouts/network/list.html` + `content/network/_index.md` |
 | `/privacy-policy/` | Hugo | `layouts/privacy-policy/list.html` + `content/privacy-policy/_index.md` |
 | `/personvernerklaering/` | Hugo | `layouts/personvernerklaering/list.html` + `content/personvernerklaering/_index.md` |
-| `/register/` | Legacy static | `static/register/index.html` |
-| `/login/` | Legacy static | `static/login/index.html` |
 
 ---
 

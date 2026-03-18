@@ -6,6 +6,26 @@
   HUGO_VERSION = "0.158.0"
   HUGO_ENV = "production"
 
+[[redirects]]
+  from = "/login/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/register/"
+  to = "/network/"
+  status = 301
+
+[[redirects]]
+  from = "/user/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/2024/11/24/let-ai-run-the-show/"
+  to = "/blogg/"
+  status = 301
+
 [[headers]]
   for = "/*"
   [headers.values]

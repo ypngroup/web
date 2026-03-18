@@ -114,10 +114,11 @@ The current site uses Ultimate Member (WordPress plugin) for login, registration
 
 **Removed legacy static HTML:** `static/business/`, `static/network/`, `static/personvernerklaering/`, `static/privacy-policy/`
 
-### Phase 4 — Auth decision
-- Evaluate whether login/registration/profiles are needed
-- If yes: implement Netlify Identity
-- If no: remove or redirect those pages
+### Phase 4 — Auth removal ✓ Complete
+- Removed `static/login/`, `static/register/`, `static/user/`, `static/2024/11/24/let-ai-run-the-show/`
+- Added Netlify 301 redirects: `/login/` → `/`, `/register/` → `/network/`, `/user/*` → `/`, `/2024/11/24/let-ai-run-the-show/` → `/blogg/`
+- Network signup is handled by the Netlify form on `/network/`
+- **TODO:** Recover "Let AI Run the Show" (2024-11-24) post from WordPress database dump and add as `content/blogg/let-ai-run-the-show.md`
 
 ### Phase 5 — Cleanup
 - Archive or remove `wp-content/plugins/`, `wp-content/themes/`
