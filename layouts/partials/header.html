@@ -1,12 +1,12 @@
 <header class="absolute top-0 left-0 right-0 z-50">
   <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
     <a href="/">
-      <img src="/wp-content/uploads/2024/02/ypn-white-1.svg" alt="{{ .Site.Params.logoAlt }}" class="h-8">
+      <img src="/wp-content/uploads/2024/02/ypn-white-1.svg" alt="{{ .Site.Params.logoAlt }}" class="h-6">
     </a>
     <nav class="flex gap-6">
       {{ range .Site.Menus.main }}
       <a href="{{ .URL }}"
-         class="text-sm font-heading font-semibold tracking-wide transition-colors {{ if eq $.RelPermalink .URL }}text-white{{ else }}text-white/70 hover:text-white{{ end }}">
+         class="text-sm font-heading font-normal tracking-wide transition-colors {{ if eq $.RelPermalink .URL }}text-white{{ else }}text-white/70 hover:text-white{{ end }}">
         {{ .Name }}
       </a>
       {{ end }}
