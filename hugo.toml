@@ -1,0 +1,35 @@
+baseURL = "https://youngprofessionalsnorway.no/"
+languageCode = "nb-NO"
+defaultContentLanguage = "nb"
+title = "YPN Group"
+
+disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
+
+[permalinks]
+  blogg = "/:year/:month/:day/:slug/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  description = "Young Professionals Norway — Norges nettverk for unge profesjonelle"
+  logoSrc = "/wp-content/uploads/2024/10/cropped-ypng-yellow-black-1-150x40.png"
+  logoAlt = "YPN Group"
+  copyrightYear = "2025"
+
+[[menus.main]]
+  name = "Hjem"
+  url = "/"
+  weight = 1
+
+
+[[menus.main]]
+  name = "Kontakt oss"
+  url = "/kontakt-oss/"
+  weight = 3
+
+# Business and Network are drafts — see content/business/_index.md and content/network/_index.md
+# Re-add these menu entries when the pages are ready to publish.
+# To work on them locally: hugo server --buildDrafts

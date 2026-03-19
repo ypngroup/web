@@ -1,0 +1,236 @@
+{{ define "main" }}
+
+{{/* ── Hero ── */}}
+<section class="relative flex items-center justify-center min-h-[70vh] text-center text-white overflow-hidden">
+  {{ partial "photo-bg" (dict "image" "/wp-content/uploads/2023/08/Lederverket-bilde-samling-april-23.jpg") }}
+  <div class="relative z-10 px-4 max-w-3xl mx-auto">
+    <h1 class="font-heading font-bold text-4xl md:text-6xl uppercase tracking-normal leading-tight mb-4">
+      YOUNG PROFESSIONALS NORWAY
+    </h1>
+    <p class="uppercase tracking-widest text-sm md:text-base text-gray-200 leading-relaxed mb-8">
+      FAGNETTVERKET OG DEN SOSIAL MØTEPLASSEN FOR UNGE OG KOMMENDE UNGE LEDERE I NORGE
+    </p>
+    <a href="/slack/"
+       class="inline-flex items-center gap-2 bg-brand-navy/80 text-white font-heading font-normal uppercase tracking-wider px-8 py-4 hover:bg-brand-navy transition-colors text-base rounded-full border border-white/20 shadow-lg">
+      BLI MED I YPN-NETTVERKET PÅ SLACK
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current" aria-hidden="true">
+        <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.122 2.521a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zm-2.523 10.122a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
+      </svg>
+    </a>
+    <p class="uppercase tracking-widest text-xs text-gray-300 mt-4">
+      SLACK-KANALEN ER UTEN KOSTNADER OG FORPLIKTELSER
+    </p>
+  </div>
+</section>
+
+{{/* ── Featured: AI Fagdag ── */}}
+<section class="bg-white text-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="font-heading font-semibold text-4xl md:text-5xl mb-5 leading-tight">
+        <a href="/2024/11/20/let-ai-run-the-show/" class="hover:text-yellow-600 transition-colors">
+          STOR SUKSESS MED YPN AI-FAGDAG
+        </a>
+      </h2>
+      <p class="text-gray-700 leading-relaxed mb-3">
+        Fullt hus hos Microsoft på denne samlingen og den store interessen for tema gjør at vi skal ta med oss dette inn i nye samlinger i 2025.
+      </p>
+      <p class="text-gray-600 leading-relaxed mb-8">
+        50 Young Professionals var med på LET AI RUN THE SHOW hos Microsoft
+      </p>
+      <a href="/kontakt-oss/"
+         class="inline-block bg-gray-50 text-[#001c35] font-heading font-semibold uppercase tracking-wider px-8 py-4 text-base rounded-full border border-gray-200 hover:bg-white transition-colors">
+        KONTAKT OSS FOR MER INFO
+      </a>
+    </div>
+    <div>
+      <img src="/wp-content/uploads/2024/10/20241021_103448.jpg"
+           alt="YPN AI-fagdag"
+           class="w-full h-64 object-cover">
+    </div>
+  </div>
+</section>
+
+{{/* ── 3 Focus Areas ── */}}
+<section class="bg-[#c5d0d8] text-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+      <!-- Left column: heading + text + image -->
+      <div>
+        <h2 class="font-heading font-semibold text-4xl md:text-5xl leading-tight mb-5">VI FOKUSERER PÅ 3 OMRÅDER</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          YPN på Slack er den digitale møteplassen for unge og kommende unge ledere i Norge. Vi arrangerer også faglige arrangementer og sosiale aktiviteter, der noen av disse er helt utenom det vanlige!
+        </p>
+        <img src="/wp-content/uploads/2024/01/young-men-and-woman.jpg"
+             alt="Young professionals networking"
+             class="w-full h-56 object-cover">
+      </div>
+      <!-- Right column: 3 open items, no card borders -->
+      <div class="space-y-10">
+        <!-- Item 1: Slack -->
+        <div class="flex gap-4 items-start">
+          <div class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 fill-white" aria-hidden="true">
+              <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.122 2.521a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zm-2.523 10.122a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading font-semibold text-2xl mb-2">YPN-nettverket på Slack</h3>
+            <p class="text-gray-800 leading-relaxed mb-1"><strong>Digitalt nettverk og møteplass for unge og kommende unge ledere</strong></p>
+            <p class="text-gray-700 leading-relaxed">Suksessen fra 2023 og 2024 blir en del av den videre satsningen, fortsatt med et styre bestående av unge ledere og en toppleder.</p>
+          </div>
+        </div>
+        <!-- Item 2: Fagarrangementer -->
+        <div class="flex gap-4 items-start">
+          <div class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 fill-white" aria-hidden="true">
+              <path d="M19 3h-1V1h-2v2H8V1H6v2H5C3.9 3 3 3.9 3 5v16c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 18H5V8h14v13zm0-15H5V5h14v1zM7 10h5v5H7z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading font-semibold text-2xl mb-2">YPN fagarrangementer</h3>
+            <p class="text-gray-800 leading-relaxed mb-1"><strong>Fysiske samlinger der vi byr på spennende faglige opplevelser</strong></p>
+            <p class="text-gray-700 leading-relaxed">Vi vil ha workshops, seminarer og møter med relevant og spennende innhold i en litt annerledes setting - på bestilling!</p>
+          </div>
+        </div>
+        <!-- Item 3: Sosiale -->
+        <div class="flex gap-4 items-start">
+          <div class="w-12 h-12 rounded-full bg-gray-900 flex items-center justify-center shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 fill-white" aria-hidden="true">
+              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-heading font-semibold text-2xl mb-2">YPN sosiale aktiviteter</h3>
+            <p class="text-gray-800 leading-relaxed mb-1"><strong>Av unge, for unge med fokus på opplevelser og nettverksbygging</strong></p>
+            <p class="text-gray-700 leading-relaxed">Vi satser videre på enkle sosiale aktiviteter, og en årlig stor happening, der vi også får inn kjente toppledere/profiler.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CTA centered at bottom -->
+    <div class="text-center mt-14">
+      <a href="/slack/"
+         class="inline-flex items-center gap-2 bg-brand-navy text-white font-heading font-normal uppercase tracking-wider px-8 py-4 text-base rounded-full shadow-lg hover:bg-[#002a4a] transition-colors">
+        BLI MED I YPN-NETTVERKET PÅ SLACK
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current" aria-hidden="true">
+          <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.122 2.521a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zm-2.523 10.122a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
+        </svg>
+      </a>
+      <p class="uppercase tracking-widest text-xs text-gray-600 mt-4">SLACK-KANALEN ER UTEN KOSTNADER OG FORPLIKTELSER</p>
+    </div>
+  </div>
+</section>
+
+{{/* ── Blog highlight: Daniel Siraj ── */}}
+<section class="bg-white text-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-20">
+    <!-- Centered heading + subtitle -->
+    <div class="text-center mb-12">
+      <h2 class="font-heading font-semibold text-4xl md:text-5xl leading-tight mb-4">
+        Daniel Kjørberg Siraj intervjuet av to i YPN-styret
+      </h2>
+      <p class="text-gray-500 text-sm uppercase tracking-wide">5 tips/råd om hvordan bygge karriere der du er</p>
+    </div>
+    <!-- 3-column body -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      <!-- Col 1: bio text -->
+      <div>
+        <p class="text-gray-700 leading-relaxed font-semibold mb-3">
+          Fra advokatfullmektig til konsernsjef i Norges største boligbyggelag; OBOS! Daniel Kjørberg Siraj er et kjent navn for mange.
+        </p>
+        <p class="text-gray-700 leading-relaxed">
+          Han leder Norges største boligbyggelag, OBOS, og er en tydelig stemme i samfunnsdebatten.
+        </p>
+      </div>
+      <!-- Col 2: author credit + CTA -->
+      <div class="flex flex-col items-center text-center">
+        <p class="text-gray-500 leading-relaxed italic mb-8">
+          Skrevet av Madeleine Charlotte Storås og Eirik Lie i styret for Young Professionals Norway i samarbeid med OBOS.
+        </p>
+        <a href="/2024/09/18/fra-advokatfullmektig-til-konsernsjef-i-norges-storste-boligbyggelag-obos/"
+           class="inline-block bg-gray-50 text-[#001c35] font-heading font-semibold uppercase tracking-wider px-8 py-4 text-base rounded-full border border-gray-200 hover:bg-white transition-colors">
+          LES HELE BLOGGEN HER
+        </a>
+      </div>
+      <!-- Col 3: image -->
+      <div>
+        <img src="/wp-content/uploads/2024/09/Daniel-Siraj-blir-intervjuet-av-Eirik-og-Madeleine-BILDE.jpg"
+             alt="Daniel Kjørberg Siraj intervjuet av to i YPN-styret"
+             class="w-full h-64 object-cover">
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ── CTA: Brundtland photo bg ── */}}
+<section class="relative flex items-center justify-center py-28 text-center text-white overflow-hidden">
+  {{ partial "photo-bg" (dict "image" "/wp-content/uploads/2023/12/Bilde-5-Lederverket-Brundtland-scaled.jpg" "overlay" "rgba(16, 16, 81, 0.04)") }}
+  <div class="relative z-10 px-4 max-w-2xl mx-auto">
+    <h2 class="font-heading font-light text-3xl md:text-5xl leading-tight mb-8 px-6 py-3" style="background-color: rgba(0,20,45,0.72);">
+      YPN-nettverket besøkte Knut Brundtland
+    </h2>
+    <a href="/slack/"
+       class="inline-flex items-center gap-2 bg-white text-brand-navy font-heading font-normal uppercase tracking-wider px-8 py-4 hover:bg-gray-100 transition-colors text-base rounded-full shadow-lg mb-4">
+      BLI MED I YPN-NETTVERKET PÅ SLACK
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 h-5 fill-current" aria-hidden="true">
+        <path d="M5.042 15.165a2.528 2.528 0 0 1-2.52 2.523A2.528 2.528 0 0 1 0 15.165a2.527 2.527 0 0 1 2.522-2.52h2.52v2.52zm1.271 0a2.527 2.527 0 0 1 2.521-2.52 2.527 2.527 0 0 1 2.521 2.52v6.313A2.528 2.528 0 0 1 8.834 24a2.528 2.528 0 0 1-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 0 1-2.521-2.52A2.528 2.528 0 0 1 8.834 0a2.528 2.528 0 0 1 2.521 2.522v2.52H8.834zm0 1.271a2.528 2.528 0 0 1 2.521 2.521 2.528 2.528 0 0 1-2.521 2.521H2.522A2.528 2.528 0 0 1 0 8.834a2.528 2.528 0 0 1 2.522-2.521h6.312zm10.122 2.521a2.528 2.528 0 0 1 2.522-2.521A2.528 2.528 0 0 1 24 8.834a2.528 2.528 0 0 1-2.522 2.521h-2.522V8.834zm-1.268 0a2.528 2.528 0 0 1-2.523 2.521 2.527 2.527 0 0 1-2.52-2.521V2.522A2.527 2.527 0 0 1 15.165 0a2.528 2.528 0 0 1 2.523 2.522v6.312zm-2.523 10.122a2.528 2.528 0 0 1 2.523 2.522A2.528 2.528 0 0 1 15.165 24a2.527 2.527 0 0 1-2.52-2.522v-2.522h2.52zm0-1.268a2.527 2.527 0 0 1-2.52-2.523 2.526 2.526 0 0 1 2.52-2.52h6.313A2.527 2.527 0 0 1 24 15.165a2.528 2.528 0 0 1-2.522 2.523h-6.313z"/>
+      </svg>
+    </a>
+    <p class="uppercase tracking-widest text-xs text-gray-300 mt-4">
+      SLACK-KANALEN ER UTEN KOSTNADER OG FORPLIKTELSER
+    </p>
+  </div>
+</section>
+
+{{/* ── Shark Tank ── */}}
+<section class="bg-white text-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-20">
+    <!-- Centered heading + subtitle -->
+    <div class="text-center mb-10">
+      <h2 class="font-heading font-semibold text-4xl md:text-5xl leading-tight mb-4">YPN "SHARK TANK"-PILOT GJENNOMFØRT</h2>
+      <p class="text-gray-600">Pitchekonkurranse for toppledere i Orion nettverket</p>
+    </div>
+    <!-- 3-image row -->
+    <div class="grid grid-cols-3 gap-4 mb-10">
+      <img src="/wp-content/uploads/2024/08/ST-pitch4-scaled.jpg" alt="Shark Tank pitch" class="w-full h-56 object-cover">
+      <img src="/wp-content/uploads/2024/08/ST-pitch1.jpg" alt="Shark Tank pitch" class="w-full h-56 object-cover">
+      <img src="/wp-content/uploads/2024/08/ST-pitch3-scaled.jpg" alt="Shark Tank pitch" class="w-full h-56 object-cover">
+    </div>
+    <!-- Text below images, centered -->
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="text-gray-700 leading-relaxed mb-4">
+        Det ble 4 presentasjoner (Pitch) for toppledere i Orion nettverket. 3 Pitch fra nye selskaper og 1 Pitch fra et konsept som var nytt for markedet.
+      </p>
+      <p class="text-gray-600 leading-relaxed italic mb-10">
+        "Topplederne stilte spørsmål og kom med råd om hva som var viktig å gjøre, unngå og tenke over."
+      </p>
+      <a href="/kontakt-oss/"
+         class="uppercase tracking-widest text-sm font-heading font-semibold text-gray-900 hover:text-gray-600 transition-colors">
+        KONTAKT OSS FOR MER INFO
+      </a>
+    </div>
+  </div>
+</section>
+
+{{/* ── Hyttetur / Årsmøte ── */}}
+<section class="bg-gray-100 text-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-20 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    <div>
+      <h2 class="font-heading font-semibold text-4xl md:text-5xl leading-tight mb-5">2 dagers sosial aktivitet og YPN-årsmøte</h2>
+      <p class="text-gray-700 leading-relaxed mb-8">
+        En av våre mest populære sosiale aktiviteter er en 2 dagers hyttetur der vi lager mat sammen, diskuterer relevante og spennende tema og får inn YPN sitt årsmøte i samme pakka! 🙂
+      </p>
+      <a href="/kontakt-oss/"
+         class="inline-block bg-brand-navy text-white font-heading font-normal uppercase tracking-wider px-8 py-4 text-base rounded-full shadow-lg hover:bg-[#002a4a] transition-colors">
+        TA KONTAKT MED OSS FOR MER INFO
+      </a>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <img src="/wp-content/uploads/2024/01/LV-samling-DNT-Styrbord.jpg" alt="YPN hyttetur" class="w-full h-48 object-cover">
+      <img src="/wp-content/uploads/2024/01/LV-samling-gruppeoppgave-scaled.jpg" alt="YPN gruppeoppgave" class="w-full h-48 object-cover">
+    </div>
+  </div>
+</section>
+
+{{ end }}

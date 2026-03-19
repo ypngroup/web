@@ -1,0 +1,64 @@
+[build]
+  command = "hugo"
+  publish = "public"
+
+[build.environment]
+  HUGO_VERSION = "0.158.0"
+  HUGO_ENV = "production"
+
+[[redirects]]
+  from = "/login/"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/register/"
+  to = "/slack/"
+  status = 301
+
+[[redirects]]
+  from = "/user/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/let-ai-run-the-show/"
+  to = "/2024/11/20/let-ai-run-the-show/"
+  status = 301
+
+[[redirects]]
+  from = "/2024/11/24/let-ai-run-the-show/"
+  to = "/2024/11/20/let-ai-run-the-show/"
+  status = 301
+
+[[redirects]]
+  from = "/author/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/category/*"
+  to = "/blogg/"
+  status = 301
+
+[[redirects]]
+  from = "/tag/*"
+  to = "/blogg/"
+  status = 301
+
+[[redirects]]
+  from = "/event/*"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/ypn-blogg/"
+  to = "/blogg/"
+  status = 301
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

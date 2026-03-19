@@ -1,0 +1,21 @@
+{{ define "main" }}
+<section class="relative min-h-[45vh] flex items-end bg-brand-navy overflow-hidden">
+  {{ partial "photo-bg" (dict "image" "/wp-content/uploads/2023/12/Bilde10.jpg") }}
+  <div class="relative z-10 max-w-4xl mx-auto px-4 pb-16 pt-40 w-full">
+    <h1 class="font-heading font-semibold text-4xl md:text-6xl leading-tight text-white uppercase tracking-wide">Bli med på Slack</h1>
+    <p class="text-gray-300 mt-4 text-lg md:text-xl font-heading font-light">Bli en del av nettverket i dag.</p>
+  </div>
+</section>
+
+<section class="bg-white">
+  <div class="max-w-3xl mx-auto px-4 py-20">
+    <p class="leading-relaxed text-gray-800 text-lg mb-8">
+      YPN er et nettverk for unge profesjonelle i Norge. Vi samles på Slack for uformelle samtaler, diskusjoner og faglig påfyll.
+    </p>
+    <a href="https://join.slack.com/t/ypn-network/shared_invite/zt-3cgryk9x1-RQJCNWlEgFNBUt0p3aYdzQ"
+       class="inline-block font-heading font-normal uppercase tracking-wider px-8 py-4 text-base bg-brand-navy text-white hover:bg-yellow-400 hover:text-brand-navy transition-colors">
+      Bli med på Slack
+    </a>
+  </div>
+</section>
+{{ end }}
