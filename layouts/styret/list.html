@@ -1,0 +1,163 @@
+{{ define "main" }}
+
+{{/* ── Hero ── */}}
+<section class="relative flex items-center justify-center min-h-[45vh] text-center text-white overflow-hidden">
+  {{ partial "photo-bg" (dict "image" "/wp-content/uploads/2023/08/Lederverket-bilde-samling-april-23.jpg") }}
+  <div class="relative z-10 px-4 max-w-3xl mx-auto">
+    <h1 class="font-heading font-bold text-4xl md:text-6xl uppercase tracking-normal leading-tight mb-4">
+      STYRET
+    </h1>
+    <p class="uppercase tracking-widest text-sm md:text-base text-gray-200 leading-relaxed">
+      MENNESKENE SOM DRIVER YPN FREMOVER
+    </p>
+  </div>
+</section>
+
+{{/* ── Intro ── */}}
+<section class="bg-white text-gray-900">
+  <div class="max-w-3xl mx-auto px-4 py-20 text-center">
+    <h2 class="font-heading font-semibold text-4xl md:text-5xl leading-tight mb-6">OM STYRET</h2>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Styret leder den daglige driften av Young Professionals Norway. Vi organiserer arrangementer, planlegger programmet, pleier nettverket, diskuterer strategi og ivaretar relasjoner — alt med mål om å gi unge og kommende ledere i Norge den beste møteplassen.
+    </p>
+  </div>
+</section>
+
+{{/* ── Board members ── */}}
+<section class="bg-[#c5d0d8] text-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-20">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+      {{/* Thomas Presthus */}}
+      <div class="flex flex-col items-center text-center">
+        <img src="/wp-content/uploads/styret/thomas-presthus.jpg"
+             alt="Thomas Presthus"
+             class="w-40 h-40 object-cover rounded-full mb-4 shadow-md">
+        <h3 class="font-heading font-semibold text-2xl mb-1">Thomas Presthus</h3>
+        <p class="text-gray-600 text-sm uppercase tracking-wider mb-3">Styreleder</p>
+        <a href="https://www.linkedin.com/in/presthus/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-[#0A66C2] text-sm font-heading font-normal hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      {{/* Tom-Atle Herland */}}
+      <div class="flex flex-col items-center text-center">
+        <img src="/wp-content/uploads/styret/tom-atle-herland.jpg"
+             alt="Tom-Atle Herland"
+             class="w-40 h-40 object-cover rounded-full mb-4 shadow-md">
+        <h3 class="font-heading font-semibold text-2xl mb-1">Tom-Atle Herland</h3>
+        <p class="text-gray-600 text-sm uppercase tracking-wider mb-3">Styremedlem</p>
+        <a href="https://www.linkedin.com/in/tom-atle-herland-68017610/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-[#0A66C2] text-sm font-heading font-normal hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      {{/* Magnus Kirø */}}
+      <div class="flex flex-col items-center text-center">
+        <img src="/wp-content/uploads/styret/magnus-kiro.jpg"
+             alt="Magnus Kirø"
+             class="w-40 h-40 object-cover rounded-full mb-4 shadow-md">
+        <h3 class="font-heading font-semibold text-2xl mb-1">Magnus Kirø</h3>
+        <p class="text-gray-600 text-sm uppercase tracking-wider mb-3">Styremedlem</p>
+        <a href="https://www.linkedin.com/in/magnuskiro/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-[#0A66C2] text-sm font-heading font-normal hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      {{/* Benjamin Joof */}}
+      <div class="flex flex-col items-center text-center">
+        <img src="/wp-content/uploads/styret/benjamin-joof.jpg"
+             alt="Benjamin Joof"
+             class="w-40 h-40 object-cover rounded-full mb-4 shadow-md">
+        <h3 class="font-heading font-semibold text-2xl mb-1">Benjamin Joof</h3>
+        <p class="text-gray-600 text-sm uppercase tracking-wider mb-3">Styremedlem</p>
+        <a href="https://www.linkedin.com/in/benjaminjoof/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-[#0A66C2] text-sm font-heading font-normal hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      {{/* Camilla Lie */}}
+      <div class="flex flex-col items-center text-center">
+        <img src="/wp-content/uploads/styret/camilla-lie.jpg"
+             alt="Camilla Lie"
+             class="w-40 h-40 object-cover rounded-full mb-4 shadow-md">
+        <h3 class="font-heading font-semibold text-2xl mb-1">Camilla Lie</h3>
+        <p class="text-gray-600 text-sm uppercase tracking-wider mb-3">Styremedlem</p>
+        <a href="https://www.linkedin.com/in/camillaristan/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-[#0A66C2] text-sm font-heading font-normal hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      {{/* Eirik Lie */}}
+      <div class="flex flex-col items-center text-center">
+        <img src="/wp-content/uploads/styret/eirik-lie.jpg"
+             alt="Eirik Lie"
+             class="w-40 h-40 object-cover rounded-full mb-4 shadow-md">
+        <h3 class="font-heading font-semibold text-2xl mb-1">Eirik Lie</h3>
+        <p class="text-gray-600 text-sm uppercase tracking-wider mb-3">Styremedlem</p>
+        <a href="https://www.linkedin.com/in/lieeirik/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-[#0A66C2] text-sm font-heading font-normal hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      {{/* Malte Bieler */}}
+      <div class="flex flex-col items-center text-center">
+        <img src="/wp-content/uploads/styret/malte-bieler.jpg"
+             alt="Malte Bieler"
+             class="w-40 h-40 object-cover rounded-full mb-4 shadow-md">
+        <h3 class="font-heading font-semibold text-2xl mb-1">Malte Bieler</h3>
+        <p class="text-gray-600 text-sm uppercase tracking-wider mb-3">Styremedlem</p>
+        <a href="https://www.linkedin.com/in/maltebieler/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-[#0A66C2] text-sm font-heading font-normal hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      {{/* Thomas Holen */}}
+      <div class="flex flex-col items-center text-center">
+        <img src="/wp-content/uploads/styret/thomas-holen.jpg"
+             alt="Thomas Holen"
+             class="w-40 h-40 object-cover rounded-full mb-4 shadow-md">
+        <h3 class="font-heading font-semibold text-2xl mb-1">Thomas Holen</h3>
+        <p class="text-gray-600 text-sm uppercase tracking-wider mb-3">Styremedlem</p>
+        <a href="https://www.linkedin.com/in/thomas-holen/" target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 text-[#0A66C2] text-sm font-heading font-normal hover:underline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 fill-current" aria-hidden="true">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+{{ end }}
