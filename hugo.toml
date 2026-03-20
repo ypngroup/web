@@ -27,6 +27,11 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
 
 
 [[menus.main]]
+  name = "Styret"
+  url = "/styret/"
+  weight = 2
+
+[[menus.main]]
   name = "Kontakt oss"
   url = "/kontakt-oss/"
   weight = 3
