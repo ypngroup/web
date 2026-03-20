@@ -32,10 +32,15 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
   weight = 2
 
 [[menus.main]]
-  name = "Kontakt oss"
-  url = "/kontakt-oss/"
+  name = "Network"
+  url = "/network/"
   weight = 3
 
-# Business and Network are drafts — see content/business/_index.md and content/network/_index.md
-# Re-add these menu entries when the pages are ready to publish.
-# To work on them locally: hugo server --buildDrafts
+[[menus.main]]
+  name = "Kontakt oss"
+  url = "/kontakt-oss/"
+  weight = 4
+
+# Business is a draft — see content/business/_index.md
+# Re-add menu entry when ready to publish.
+# To work on it locally: hugo server --buildDrafts

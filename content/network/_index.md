@@ -1,4 +1,3 @@
 ---
-title: "YPN Network"
-draft: true
+title: "YPN Nettverksprogram"
 ---
