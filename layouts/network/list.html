@@ -112,7 +112,30 @@
   </div>
 </section>
 
-{{/* Section 4: Påmelding */}}
+{{/* Section 4: Testimonials */}}
+{{ with site.Data.network_testimonials }}
+<section class="py-20 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="font-heading font-semibold text-4xl md:text-5xl leading-tight text-brand-navy mb-12 uppercase tracking-wide">Hva sier deltakerne?</h2>
+    <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{ range . }}
+      <li class="bg-white p-8 flex flex-col gap-6">
+        <p class="leading-relaxed text-gray-700 italic flex-1">&ldquo;{{ .quote }}&rdquo;</p>
+        <div class="flex items-center gap-4">
+          <img src="{{ .photo }}" alt="{{ .name }}" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
+          <div>
+            <p class="font-heading font-semibold text-brand-navy text-sm">{{ .name }}</p>
+            <p class="text-gray-500 text-sm">{{ .employer }}</p>
+          </div>
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
+
+{{/* Section 5: Påmelding */}}
 <section id="pamelding" class="pt-20 pb-16 bg-gray-50">
   <div class="max-w-2xl mx-auto px-4">
     <h2 class="font-heading font-semibold text-4xl leading-tight text-brand-navy mb-2 uppercase tracking-wide">Påmelding</h2>
