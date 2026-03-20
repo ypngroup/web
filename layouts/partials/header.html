@@ -3,7 +3,7 @@
     <a href="/">
       <img src="/wp-content/uploads/2024/02/ypn-white-1.svg" alt="{{ .Site.Params.logoAlt }}" class="h-6">
     </a>
-    <nav id="main-nav" class="hidden md:flex gap-6">
+    <nav class="hidden md:flex gap-6">
       {{ range .Site.Menus.main }}
       <a href="{{ .URL }}"
          class="text-sm font-heading font-normal tracking-wide transition-colors {{ if eq $.RelPermalink .URL }}text-white{{ else }}text-white/70 hover:text-white{{ end }}">
@@ -29,16 +29,17 @@
   </div>
 </header>
 <script>
-  document.getElementById('nav-toggle').addEventListener('click', function() {
-    var menu = document.getElementById('mobile-menu');
-    var expanded = this.getAttribute('aria-expanded') === 'true';
-    menu.classList.toggle('hidden');
+  const navToggle = document.getElementById('nav-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  navToggle.addEventListener('click', function() {
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    mobileMenu.classList.toggle('hidden');
     this.setAttribute('aria-expanded', String(!expanded));
   });
-  document.querySelectorAll('#mobile-menu a').forEach(function(a) {
-    a.addEventListener('click', function() {
-      document.getElementById('mobile-menu').classList.add('hidden');
-      document.getElementById('nav-toggle').setAttribute('aria-expanded', 'false');
-    });
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+      mobileMenu.classList.add('hidden');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
   });
 </script>
