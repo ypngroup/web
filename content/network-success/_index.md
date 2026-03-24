@@ -1,0 +1,3 @@
+---
+title: "Takk for påmeldingen"
+---
