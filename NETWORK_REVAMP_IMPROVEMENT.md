@@ -63,9 +63,9 @@ This section handles a real decision point — the person's manager needs to say
 
 The invoice field is intentionally kept in the form as a commitment device — collecting payment details upfront makes drop-off less likely even with a refund guarantee. The fix was copy, not structure: the field is now marked optional, with a supporting line ("Vi sender faktura til arbeidsgiver etter første samling. Fyll inn det du har — vi følger opp om noe mangler.") that reduces anxiety without removing the commitment signal. The refund note below the submit button was also updated to consistently say "etter første samling".
 
-### 7. Page title / SEO — "YPN Nettverksprogram" is weak (Low)
+### ~~7. Page title / SEO — "YPN Nettverksprogram" is weak~~ (Low) ✓ Done
 
-The `<title>` tag says "YPN Nettverksprogram — YPN Group". For someone searching for lederutviklingsprogram or nettverksprogram for unge ledere, this doesn't rank well and doesn't signal what the page is about. A stronger title: "YPN Network — Lederutviklingsprogram for unge ledere i Norge".
+Title updated to "YPN Network — Eksklusivt lederprogram for unge ledere i Norge". Meta description added to `content/network/_index.md` with scarcity hook and outcome framing.
 
 ### 8. Nav label mismatch (Low)
 
@@ -98,7 +98,7 @@ The footer on the Network page leads with "BLI MED I YPN NETTVERKET PÅ SLACK" a
 | ~~Invoice field friction in form~~ ✓ | Medium | No |
 | ~~"Fire arbeidsdager" framing backfires~~ ✓ | Medium | No |
 | ~~PDF download styled as plain text link~~ ✓ | Medium | No |
-| Page title weak for SEO | Low | No |
+| ~~Page title weak for SEO~~ ✓ | Low | No |
 | Nav label mismatch (Network vs Nettverksprogram) | Low | No |
 | Footer competes with funnel | Low | No |
 | Homepage "3 areas" section misses Network | Low | No |
