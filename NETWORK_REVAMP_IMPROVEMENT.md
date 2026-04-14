@@ -67,9 +67,11 @@ The invoice field is intentionally kept in the form as a commitment device — c
 
 Title updated to "YPN Network — Eksklusivt lederprogram for unge ledere i Norge". Meta description added to `content/network/_index.md` with scarcity hook and outcome framing.
 
-### 8. Nav label mismatch (Low)
+### ~~8. Nav label mismatch (Low)~~ ✓ Done
 
-The nav says "Network" (English) but the page title is "YPN Nettverksprogram" (Norwegian). The Slack upsell on `/slack/` and the homepage hero both call it "YPN Network". Pick one and use it consistently — either the Norwegian form or the branded English form. "Network" works fine as a brand name, but the mix signals inconsistency.
+~~The nav says "Network" (English) but the page title is "YPN Nettverksprogram" (Norwegian). The Slack upsell on `/slack/` and the homepage hero both call it "YPN Network". Pick one and use it consistently — either the Norwegian form or the branded English form. "Network" works fine as a brand name, but the mix signals inconsistency.~~
+
+Hero `<h1>` changed from "YPN Nettverksprogram" to "YPN Network". Nav label was already "Network". Subheading ("Et årsprogram for ambisiøse, unge ledere") carries the descriptor.
 
 ### 9. Footer sends people away from the funnel (Low)
 
@@ -99,7 +101,7 @@ The footer on the Network page leads with "BLI MED I YPN NETTVERKET PÅ SLACK" a
 | ~~"Fire arbeidsdager" framing backfires~~ ✓ | Medium | No |
 | ~~PDF download styled as plain text link~~ ✓ | Medium | No |
 | ~~Page title weak for SEO~~ ✓ | Low | No |
-| Nav label mismatch (Network vs Nettverksprogram) | Low | No |
+| ~~Nav label mismatch (Network vs Nettverksprogram)~~ ✓ | Low | No |
 | Footer competes with funnel | Low | No |
 | Homepage "3 areas" section misses Network | Low | No |
 
