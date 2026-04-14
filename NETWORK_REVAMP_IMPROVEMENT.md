@@ -59,9 +59,9 @@ This section handles a real decision point — the person's manager needs to say
 - The downloadable PDF link is the highest-value CTA on this section but is not visual enough — a button styled like the others would convert better than a plain text link.
 - There's no preview of what the PDF contains, which means most people won't download something they can't evaluate.
 
-### 6. Form friction — asking for invoice information upfront (Medium)
+### ~~6. Form friction — asking for invoice information upfront~~ (Medium) ✓ Done
 
-The form asks for "Fakturainformasjon" (firmanavn, org.nr, referanse) before the person has even been accepted or confirmed. This is a significant barrier for someone who's still deciding — they're being asked to do their manager's procurement work before knowing if there's even a spot for them. Suggested fix: make this field conditional ("Har du allerede intern godkjenning? Du kan også sende dette etterpå.") or move it to a confirmation step.
+The invoice field is intentionally kept in the form as a commitment device — collecting payment details upfront makes drop-off less likely even with a refund guarantee. The fix was copy, not structure: the field is now marked optional, with a supporting line ("Vi sender faktura til arbeidsgiver etter første samling. Fyll inn det du har — vi følger opp om noe mangler.") that reduces anxiety without removing the commitment signal. The refund note below the submit button was also updated to consistently say "etter første samling".
 
 ### 7. Page title / SEO — "YPN Nettverksprogram" is weak (Low)
 
@@ -95,7 +95,7 @@ The footer on the Network page leads with "BLI MED I YPN NETTVERKET PÅ SLACK" a
 | ~~Same image in hero and body~~ ✓ | High | No — but damages quality signal |
 | ~~"Programmet" copy is logistics, not experience~~ ✓ | High | No |
 | ~~Feature list, not value list ("Hva får du?")~~ ✓ | Medium | No |
-| Invoice field friction in form | Medium | No |
+| ~~Invoice field friction in form~~ ✓ | Medium | No |
 | ~~"Fire arbeidsdager" framing backfires~~ ✓ | Medium | No |
 | ~~PDF download styled as plain text link~~ ✓ | Medium | No |
 | Page title weak for SEO | Low | No |
