@@ -83,11 +83,11 @@ The network layout now overrides the footer block with a minimal copyright-only 
 
 ## Cross-channel gaps
 
-**Homepage → Network page**: The homepage hero is well-aligned — same scarcity, same price, same framing. But the "VI FOKUSERER PÅ 3 OMRÅDER" section below the hero still describes YPN broadly (Slack, fagarrangementer, sosiale aktiviteter) without any mention of the Network programme — even though it's now the primary product.
+**Homepage → Network page**: ✓ Done. "VI FOKUSERER PÅ 3 OMRÅDER" renamed to "HVA ER YPN?" and restructured: Network leads as item 1 (star icon, inline "Se programmet →" link), sosiale arrangementer replaces fagarrangementer as item 2, Slack remains item 3. Intro paragraph updated to frame YPN as a ladder from afterworks to Network. Section CTAs split to "SE YPN NETWORK" (primary) and "BLI MED PÅ SLACK" (secondary); LinkedIn button removed from this section.
 
 **Slack page → Network page**: The upsell section on the Slack page is well-written and creates a clear upgrade path. The stat tiles are consistent across both pages. This works.
 
-**Homepage blog content**: The Daniel Kjørberg Siraj piece and the Knut Brundtland visit are sitting on the homepage as general interest content, but they're the strongest proof the programme concept works. Neither links to the Network page. A single line — "Besøk som dette er en del av YPN Network. [Les mer →]" — would tie proof to product.
+**Homepage blog content**: ✓ Done. Brundtland photo CTA section: added "Besøk som dette er en del av YPN Network." and swapped button from Slack to "SE YPN NETWORK → /network/". Siraj blog post: added inline Network link after the opening paragraph ("Intervjuet ble gjennomført som en del av YPN Network — et strukturert lederutviklingsprogram for ambisiøse unge ledere i Norge.").
 
 ---
 
@@ -105,6 +105,6 @@ The network layout now overrides the footer block with a minimal copyright-only 
 | ~~Page title weak for SEO~~ ✓ | Low | No |
 | ~~Nav label mismatch (Network vs Nettverksprogram)~~ ✓ | Low | No |
 | ~~Footer competes with funnel~~ ✓ | Low | No |
-| Homepage "3 areas" section misses Network | Low | No |
+| ~~Homepage "3 areas" section misses Network~~ ✓ | Low | No |
 
 The page is structurally solid and the flow is correct. The main thing standing between this and launch is real testimonials. Everything else is copy and polish.

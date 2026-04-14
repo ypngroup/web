@@ -18,6 +18,8 @@ Daniel Kjørberg Siraj er et kjent navn for mange. Han leder Norges største bol
 
 **Se Daniel sine 5 råd nederst i dette intervjuet**
 
+*Intervjuet ble gjennomført som en del av [YPN Network](/network/) — et strukturert lederutviklingsprogram for ambisiøse unge ledere i Norge.*
+
 ## *Kort om hvordan Daniel havnet i OBOS*
 
 Daniel forteller at han møtte OBOS da han jobbet i kommunen som byrådssekretær for byutvikling i ulike settinger. I løpet av tiden i kommunen var Daniel på en reise til utlandet, og ble "shanghaiet i Shanghai" bokstavelig talt. Etter endt periode som byrådssekretær søkte Daniel flere jobber i ulike advokatselskaper da han stod uten jobb, før han tok kontakt med daværende konserndirektør Martin Mæland i OBOS som han hadde truffet i Shanghai. Etter noen dager ble han invitert til Obos og gjennom en prat med juridisk direktør startet Daniel sin reise som advokatfullmektig i juridisk avdeling.
