@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YPN Network — Til min leder</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #001c35;
+      --yellow: #facc15;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #1a1a1a;
+      background: #fff;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      background-color: var(--navy);
+      padding: 20px 32px;
+      display: flex;
+      align-items: center;
+    }
+
+    .header img {
+      height: 40px;
+      width: auto;
+    }
+
+    /* ---- Hero band ---- */
+    .hero-band {
+      background-color: var(--navy);
+      border-top: 4px solid var(--yellow);
+      padding: 28px 32px 24px;
+    }
+
+    .hero-band .eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 10px;
+    }
+
+    .hero-band h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 1.25;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .hero-band .subtitle {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px;
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* ---- Body ---- */
+    .body {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 24px 0 40px;
+    }
+
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--navy);
+      margin-top: 36px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--yellow);
+      display: inline-block;
+      page-break-after: avoid;
+      break-after: avoid;
+    }
+
+    h2 + p,
+    h2 + ul,
+    h2 + div {
+      page-break-before: avoid;
+      break-before: avoid;
+    }
+
+    .page-break {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: #1a1a1a;
+    }
+
+    ul {
+      list-style: none;
+      margin: 12px 0 18px;
+      padding: 0;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    ul li {
+      padding-left: 20px;
+      margin-bottom: 10px;
+      position: relative;
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 9px;
+      width: 8px;
+      height: 2px;
+      background: var(--yellow);
+    }
+
+    ul li strong {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    /* ---- Timeline table ---- */
+    .timeline {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 14px;
+    }
+
+    .timeline th {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--navy);
+      background: #f5f7fa;
+      padding: 10px 14px;
+      text-align: left;
+      border-bottom: 2px solid var(--yellow);
+    }
+
+    .timeline td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #e8ecf0;
+      vertical-align: top;
+    }
+
+    .timeline tr:last-child td {
+      border-bottom: none;
+    }
+
+    .timeline td:first-child {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: var(--navy);
+      white-space: nowrap;
+      width: 1%;
+      padding-right: 24px;
+    }
+
+    /* ---- Price callout ---- */
+    .price-box {
+      background: #f5f7fa;
+      border-left: 4px solid var(--yellow);
+      padding: 18px 22px;
+      margin: 16px 0 22px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .price-box .amount {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--navy);
+    }
+
+    .price-box p {
+      margin: 4px 0 0;
+      font-size: 14px;
+      color: #444;
+    }
+
+    /* ---- Sign-off ---- */
+    .signoff {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e4e8;
+      font-style: italic;
+      color: #555;
+      font-size: 14px;
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      background-color: var(--navy);
+      padding: 20px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .footer a {
+      color: var(--yellow);
+      text-decoration: none;
+    }
+
+    /* ---- Print styles ---- */
+    @media print {
+      @page {
+        margin: 0;
+        size: A4 portrait;
+      }
+
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .header,
+      .hero-band {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="/wp-content/uploads/2024/02/cropped-ypn-logo-white-300x148.png"
+         alt="YPN &#x2014; Young Professionals Norway" />
+  </div>
+
+  <!-- Hero band -->
+  <div class="hero-band">
+    <p class="eyebrow">YPN Network 2026&#x2013;2027</p>
+    <h1>Til min leder</h1>
+    <p class="subtitle">Et notat om hvorfor jeg &#xF8;nsker &#xe5; delta i YPN Network</p>
+  </div>
+
+  <!-- Body -->
+  <div class="body">
+
+    <h2>Hva er dette?</h2>
+    <p>
+      YPN Network er et eksklusivt &#xe5;rsprogram for unge ledere (25&#x2013;35 &#xe5;r) i norsk n&#xe6;ringsliv.
+      Kullet best&#xe5;r av maksimalt 20 deltakere fra ulike bransjer og selskaper &#x2014; et bevisst valg
+      som gj&#xF8;r at man faktisk blir kjent med de man m&#xF8;ter, i stedet for &#xe5; samle flest mulig i et rom.
+    </p>
+    <p>Programmet l&#xF8;per fra august til juni og samler kullet fire ganger:</p>
+
+    <table class="timeline">
+      <thead>
+        <tr>
+          <th>Tidspunkt</th>
+          <th>Samling</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>August</td>
+          <td>Oppstart &#x2014; bli kjent med de 19 andre i kullet</td>
+        </tr>
+        <tr>
+          <td>November</td>
+          <td>Fordypning &#x2014; keynotes, paneler og workshops</td>
+        </tr>
+        <tr>
+          <td>Mars</td>
+          <td>Topplederbes&#xF8;k &#x2014; &#xe5;pen samtale med en toppleder</td>
+        </tr>
+        <tr>
+          <td>Juni</td>
+          <td>Avslutning &#x2014; for de fleste starten p&#xe5; relasjoner som varer</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Mellom samlingene er deltakerne i kontakt via en lukket Slack-kanal.</p>
+
+    <h2>Hva tar jeg med tilbake til jobben?</h2>
+    <ul>
+      <li>
+        <strong>Et nettverk jeg faktisk bruker.</strong>
+        Fordi gruppen er liten og kuratert, og vi m&#xF8;tes fire ganger over ett &#xe5;r, bygges det
+        reelle relasjoner &#x2014; ikke visittkort-bekjentskapene. Deltakerne er i samme karrierefase,
+        p&#xe5; tvers av bransjer. Det er nettopp der de nyttigste samtalene skjer.
+      </li>
+      <li>
+        <strong>Perspektiver utenfra.</strong>
+        Fagsamlingene og topplederbes&#xF8;kene gir innspill og referansepunkter jeg ikke f&#xe5;r p&#xe5;
+        interne kurs. Tidligere kull har hatt &#xe5;pne samtaler med Kristin Skogen Lund og Frank
+        Br&#xe5;then om lederskap, karriere og de utfordringene ingen snakker om p&#xe5; scenen.
+      </li>
+      <li>
+        <strong>Tydeligere lederskap.</strong>
+        &#xC5; investere i relasjoner og nettverk er en del av &#xe5; ta lederrollen p&#xe5; alvor, ikke bare
+        oppgavene i stillingsbeskrivelsen.
+      </li>
+    </ul>
+
+    <h2>Hva koster det?</h2>
+    <div class="price-box">
+      <div class="amount">Kr. 2&#x202f;000</div>
+      <p>Fakturert til arbeidsgiver ved f&#xF8;rste samling</p>
+    </div>
+    <p>
+      I tillegg kommer fire arbeidsdager i l&#xF8;pet av programm&#xe5;ret (august&#x2013;juni).
+    </p>
+    <p>
+      Til sammenligning: et enkeltdagskurs hos de fleste faglige akt&#xF8;rer koster det samme
+      eller mer &#x2014; uten det langvarige nettverket. M&#xF8;ter jeg opp og finner ut at programmet
+      ikke er noe for meg, refunderes bel&#xF8;pet.
+    </p>
+
+    <h2>Hvem arrangerer dette?</h2>
+    <p>
+      Young Professionals Norway (YPN) er en norsk organisasjon for unge fagpersoner og
+      ledere. YPN Network er en del av kjerneaktiviteten deres.
+    </p>
+    <p>
+      Mer informasjon:
+      <a href="https://youngprofessionalsnorway.no/network" style="color: var(--navy); font-weight: 600;">
+        youngprofessionalsnorway.no/network
+      </a>
+    </p>
+
+    <p class="signoff">
+      Jeg h&#xe5;per du ser det samme potensialet som jeg gj&#xF8;r. Jeg setter pris p&#xe5; &#xe5; ta en prat om det.
+    </p>
+
+  </div>
+
+
+</body>
+</html>

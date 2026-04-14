@@ -131,3 +131,43 @@ The `overlay` param accepts any CSS `background` value. Omitting it defaults to 
 ### Permalinks
 
 Hugo is configured to preserve the original WordPress URL structure for blog posts (`/2024/09/18/slug/`) to avoid breaking existing links.
+
+---
+
+## Employer memo (Network page download)
+
+The "Last ned notat til din leder" download on the Network page links to `/downloads/ypn-nettverksprogram-til-leder.pdf`.
+
+| File | Purpose |
+|------|---------|
+| `static/downloads/ypn-nettverksprogram-til-leder.html` | Branded HTML source — edit this |
+| `static/downloads/ypn-nettverksprogram-til-leder.md` | Plain Markdown mirror — keep in sync with the HTML |
+| `static/downloads/ypn-nettverksprogram-til-leder.pdf` | Generated PDF — do not edit directly, regenerate from HTML |
+
+### Regenerating the PDF
+
+After editing the HTML source, regenerate the PDF with Chrome headless. Requires a running Hugo dev server:
+
+```bash
+hugo server --port 1314
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --headless=new \
+  --print-to-pdf="static/downloads/ypn-nettverksprogram-til-leder.pdf" \
+  --print-to-pdf-no-header \
+  --no-pdf-header-footer \
+  --paper-width=8.27 \
+  --paper-height=11.69 \
+  --margin-top=0 --margin-bottom=0 --margin-left=0 --margin-right=0 \
+  --no-sandbox \
+  "http://localhost:1314/downloads/ypn-nettverksprogram-til-leder.html"
+```
+
+### Design notes
+
+- Brand colors and fonts are inlined in the HTML `<style>` block (no Tailwind — standalone file)
+- Navy: `#001c35`, yellow: `#facc15`, fonts: Poppins (headings) + Open Sans (body) via Google Fonts
+- Logo: white PNG at `/wp-content/uploads/2024/02/cropped-ypn-logo-white-300x148.png`
+- Base font: 13px / line-height 1.7
+- Page margins: zero Chrome margins, padding handled in CSS (header/hero: `32px`, body: `0`)
+- The HTML has a `@media print` block with `print-color-adjust: exact` to preserve background colors
