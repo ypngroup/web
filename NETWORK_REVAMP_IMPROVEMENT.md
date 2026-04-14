@@ -73,9 +73,11 @@ Title updated to "YPN Network — Eksklusivt lederprogram for unge ledere i Norg
 
 Hero `<h1>` changed from "YPN Nettverksprogram" to "YPN Network". Nav label was already "Network". Subheading ("Et årsprogram for ambisiøse, unge ledere") carries the descriptor.
 
-### 9. Footer sends people away from the funnel (Low)
+### ~~9. Footer sends people away from the funnel~~ (Low) ✓ Done
 
-The footer on the Network page leads with "BLI MED I YPN NETTVERKET PÅ SLACK" and the LinkedIn CTA. For a visitor who's on the conversion page for a kr. 2 000 annual programme, the footer is steering them toward a free product. Worth considering a Network-specific footer — or at least reordering the CTAs so the Slack offer doesn't appear more prominently than the programme itself.
+~~The footer on the Network page leads with "BLI MED I YPN NETTVERKET PÅ SLACK" and the LinkedIn CTA. For a visitor who's on the conversion page for a kr. 2 000 annual programme, the footer is steering them toward a free product. Worth considering a Network-specific footer — or at least reordering the CTAs so the Slack offer doesn't appear more prominently than the programme itself.~~
+
+The network layout now overrides the footer block with a minimal copyright-only footer. All other pages keep the full Slack/LinkedIn footer. Implemented via a `{{ block "footer" }}` override in `baseof.html` and `{{ define "footer" }}` in `layouts/network/list.html`.
 
 ---
 
@@ -102,7 +104,7 @@ The footer on the Network page leads with "BLI MED I YPN NETTVERKET PÅ SLACK" a
 | ~~PDF download styled as plain text link~~ ✓ | Medium | No |
 | ~~Page title weak for SEO~~ ✓ | Low | No |
 | ~~Nav label mismatch (Network vs Nettverksprogram)~~ ✓ | Low | No |
-| Footer competes with funnel | Low | No |
+| ~~Footer competes with funnel~~ ✓ | Low | No |
 | Homepage "3 areas" section misses Network | Low | No |
 
 The page is structurally solid and the flow is correct. The main thing standing between this and launch is real testimonials. Everything else is copy and polish.
