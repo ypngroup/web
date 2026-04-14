@@ -51,7 +51,7 @@ If real quotes aren't yet available, consider:
 - Pulling one strong paragraph from Daniel Kjørberg Siraj's interview (on the homepage) that speaks to the value of professional networks at a young career stage
 - Or temporarily removing the section and surfacing the Thomas contact section earlier
 
-### 5. The "Skal arbeidsgiver betale?" section is underdesigned and undersold (Medium)
+### 5. ~~The "Skal arbeidsgiver betale?" section is underdesigned and undersold~~ (Medium) ✓ Done
 
 This section handles a real decision point — the person's manager needs to say yes — but it's styled as a minor footnote after the navy Thomas section. Issues:
 
@@ -96,8 +96,8 @@ The footer on the Network page leads with "BLI MED I YPN NETTVERKET PÅ SLACK" a
 | ~~"Programmet" copy is logistics, not experience~~ ✓ | High | No |
 | ~~Feature list, not value list ("Hva får du?")~~ ✓ | Medium | No |
 | Invoice field friction in form | Medium | No |
-| "Fire arbeidsdager" framing backfires | Medium | No |
-| PDF download styled as plain text link | Medium | No |
+| ~~"Fire arbeidsdager" framing backfires~~ ✓ | Medium | No |
+| ~~PDF download styled as plain text link~~ ✓ | Medium | No |
 | Page title weak for SEO | Low | No |
 | Nav label mismatch (Network vs Nettverksprogram) | Low | No |
 | Footer competes with funnel | Low | No |
