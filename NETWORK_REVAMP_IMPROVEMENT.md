@@ -30,18 +30,18 @@ The four gathering descriptions read like logistics, not experiences:
 - **Mars:** The topplederbesøk is the most exclusive thing in the programme, and the copy hedges it to death: "Eksklusivt besøk hos en ledende norsk virksomhet — eller direkte møte med en administrerende direktør." The "eller" undercuts both. Pick one, or if it truly varies, say "I fjor besøkte kullet Telenor og møtte konsernsjefen."
 - **Juni:** "vi feirer et år med faglig påfyll, nye bekjentskaper" — this is the weakest closing line. The year ends. What do participants leave with? What's changed for them?
 
-### 3. "Hva får du?" is a feature list, not a value list (Medium)
+### 3. ~~"Hva får du?" is a feature list, not a value list~~ (Medium) ✓ Done
 
-Six of the six checklist items describe *format*, not *outcome*. Compare:
+All six checklist items rewritten to lead with outcome, not format:
 
-| Current | Outcome-oriented alternative |
-|---------|------------------------------|
-| "4 eksklusive samlinger per år" | "4 samlinger der du møter de samme folkene — og faktisk rekker å bygge tillit" |
+| Old | New |
+|-----|-----|
+| "4 eksklusive samlinger per år" | "4 samlinger der du møter de samme 20 menneskene og faktisk rekker å bygge tillit" |
 | "Kun 20 plasser — bli kjent med de samme personene" | "En fast gruppe på 20. Du kjenner dem alle ved årets slutt." |
-| "Møt kjente toppledere og bedrifter" | "Besøk toppledere du ellers aldri ville nådd — eksklusivt, for kullet" |
-| "Relasjoner på tvers av bransjer" | "Perspektiver utenfor din bransje, fra ledere på nøyaktig samme sted i karrieren" |
-
-The checklist is a repeating pattern the brain scans. It needs punchy, outcome-rich wording.
+| "Eksklusiv Slack-kanal og e-postliste med alle medlemmer" | "En felles Slack-kanal der kullet holder kontakten mellom samlingene" |
+| "Faglig program med tankeledere og toppledere. Format og tema varierer hvert år" | "Et faglig program skreddersydd for der du er i karrieren nå, og dit du skal" |
+| "Møt kjente toppledere og bedrifter" | "Besøk toppledere du ellers aldri ville nådd og bygg relasjoner som åpner dører" |
+| "Relasjoner på tvers av bransjer med ledere på samme sted i karrieren som deg" | "Perspektiver fra unge og kommende ledere utenfor din bransje, som er på samme sted i karrieren som deg" |
 
 ### 4. "Hva sier deltakerne?" — three placeholders (High / Launch blocker)
 
@@ -94,7 +94,7 @@ The footer on the Network page leads with "BLI MED I YPN NETTVERKET PÅ SLACK" a
 | Placeholder testimonials (all 3) | High | **Yes** |
 | ~~Same image in hero and body~~ ✓ | High | No — but damages quality signal |
 | ~~"Programmet" copy is logistics, not experience~~ ✓ | High | No |
-| Feature list, not value list ("Hva får du?") | Medium | No |
+| ~~Feature list, not value list ("Hva får du?")~~ ✓ | Medium | No |
 | Invoice field friction in form | Medium | No |
 | "Fire arbeidsdager" framing backfires | Medium | No |
 | PDF download styled as plain text link | Medium | No |
