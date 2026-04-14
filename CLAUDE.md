@@ -93,6 +93,27 @@ These conventions are derived from the live site at youngprofessionalsnorway.no 
 | Hero overlay | `linear-gradient(135deg, rgba(11,27,48,0.53) 23%, rgba(36,106,130,0.61) 94%)` — extracted from live site stylesheet |
 | Photo CTA overlay (Brundtland) | `rgba(16,16,81,0.04)` — near-invisible tint |
 
+### Homepage hero variants
+
+The homepage hero is swappable via a single line in `layouts/index.html`. Two partials exist:
+
+| Partial | When to use |
+|---------|-------------|
+| `layouts/partials/hero-network-open.html` | Network programme is open for signups — full-bleed photo, pitch copy, stat tiles, CTA to `/network/` |
+| `layouts/partials/hero-default.html` | Off-season — general YPN branding, Slack + LinkedIn CTAs |
+
+To switch, edit the one active line in `layouts/index.html`:
+
+```html
+{{/* Programme OPEN (current): */}}
+{{ partial "hero-network-open" . }}
+
+{{/* Programme CLOSED — swap to this: */}}
+{{ partial "hero-default" . }}
+```
+
+---
+
 ### Photo background sections
 
 Full-bleed background image sections use the `photo-bg` partial, which renders the image div and overlay div:
