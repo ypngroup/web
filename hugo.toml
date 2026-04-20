@@ -19,6 +19,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap", "robotsTXT"]
   logoAlt = "YPN Group"
   copyrightYear = "2025"
   linkedinUrl = "https://www.linkedin.com/company/ypngroup/"
+  networkContactEmail = "nikolai@youngprofessionalsnorway.no"
 
 [[menus.main]]
   name = "Hjem"
