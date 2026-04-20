@@ -1,0 +1,9 @@
+# Testimonials are hidden until real quotes are collected.
+# Add entries here to re-enable the section — no template changes needed.
+# See NETWORK_REVAMP.md for collection guidance and the prompt questions to use.
+#
+# Format:
+# - quote: "..."
+#   name: "Fornavn Etternavn"
+#   employer: "Bedrift AS"
+#   photo: "/wp-content/uploads/..."
