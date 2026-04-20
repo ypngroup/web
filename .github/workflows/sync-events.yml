@@ -1,0 +1,31 @@
+name: Sync events from Google Sheets
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Sync events.yaml
+        env:
+          EVENTS_SHEET_URL: "https://docs.google.com/spreadsheets/d/e/2PACX-1vTdLHqeRM_Qkb2DTlIfgUIde9O4YAzUla7Xl_gNPoSzM-LKTOLBf5A2UzUmx6IDwEAlx078X0qAw_v7/pub?gid=1076282401&single=true&output=csv"
+        run: python3 .github/workflows/sync_events.py
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/events.yaml
+          if git diff --staged --quiet; then
+            echo "No changes."
+          else
+            git commit -m "chore: sync events from Google Sheets"
+            git push
+          fi

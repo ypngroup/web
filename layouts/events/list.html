@@ -1,0 +1,130 @@
+{{ define "main" }}
+
+<section class="relative flex items-center justify-center min-h-[45vh] text-center text-white overflow-hidden">
+  {{ partial "photo-bg" (dict "image" "/wp-content/uploads/2023/08/Lederverket-bilde-samling-april-23.jpg") }}
+  <div class="relative z-10 px-4 max-w-3xl mx-auto">
+    <h1 class="font-heading font-bold text-4xl md:text-6xl uppercase tracking-normal leading-tight mb-4">
+      ARRANGEMENTER
+    </h1>
+    <p class="uppercase tracking-widest text-sm md:text-base text-gray-200 leading-relaxed">
+      ÅPNE OG EKSKLUSIVE SAMLINGER FOR YPN-NETTVERKET
+    </p>
+  </div>
+</section>
+
+<section class="bg-white text-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-20">
+    <h2 class="font-heading font-semibold text-4xl md:text-5xl leading-tight mb-12">Kommende arrangementer</h2>
+    <div id="upcoming-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {{ range .Site.Data.events }}
+      <article
+        class="event-card flex flex-col bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+        data-date="{{ .date }}"
+        style="display:none">
+        <div class="p-6 flex flex-col flex-1">
+          <div class="flex items-center justify-between mb-3">
+            <p class="text-xs font-heading uppercase tracking-widest text-gray-400">
+              {{ .date | replaceRE "^(\\d{4})-(\\d{2})-(\\d{2})$" "$3.$2.$1" }} kl. {{ .time }}
+            </p>
+            {{ if eq .type "public" }}
+            <span class="text-xs font-heading uppercase tracking-wider px-2 py-0.5 bg-brand-yellow text-black">Åpent</span>
+            {{ else if eq .type "members" }}
+            <span class="text-xs font-heading uppercase tracking-wider px-2 py-0.5 bg-brand-navy text-white">Medlemmer</span>
+            {{ else if eq .type "network" }}
+            <span class="text-xs font-heading uppercase tracking-wider px-2 py-0.5 bg-gray-800 text-white">Network</span>
+            {{ end }}
+          </div>
+          <h3 class="font-heading font-semibold text-xl leading-tight mb-2">{{ .title }}</h3>
+          <p class="text-xs font-heading uppercase tracking-widest text-gray-400 mb-3">{{ .location }}</p>
+          {{ with .description }}
+          <p class="text-gray-600 leading-relaxed text-sm flex-1">{{ . }}</p>
+          {{ end }}
+          {{ with .signup_url }}
+          <a href="{{ . }}" target="_blank" rel="noopener"
+             class="mt-5 self-start inline-block bg-brand-navy text-white font-heading font-normal uppercase tracking-wider px-8 py-4 text-base hover:bg-brand-yellow hover:text-black transition-colors">
+            Meld deg på
+          </a>
+          {{ end }}
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    <p id="upcoming-empty" class="text-gray-500 leading-relaxed" style="display:none">
+      Ingen kommende arrangementer er planlagt ennå. Følg oss på <a href="{{ .Site.Params.linkedinUrl }}" target="_blank" rel="noopener" class="underline hover:text-brand-navy">LinkedIn</a> for å bli varslet.
+    </p>
+  </div>
+</section>
+
+<section class="bg-gray-50 text-gray-900">
+  <div class="max-w-6xl mx-auto px-4 py-20">
+    <div class="flex items-center justify-between mb-12">
+      <h2 class="font-heading font-semibold text-4xl md:text-5xl leading-tight">Tidligere arrangementer</h2>
+      <button id="past-toggle"
+              class="font-heading font-normal uppercase tracking-wider text-sm text-brand-navy hover:text-brand-yellow transition-colors"
+              style="display:none">
+        Vis tidligere
+      </button>
+    </div>
+    <div id="past-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" style="display:none"></div>
+    <p id="past-empty" class="text-gray-400 leading-relaxed text-sm" style="display:none">
+      Ingen tidligere arrangementer.
+    </p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  var cards = Array.from(document.querySelectorAll('.event-card'));
+  var upcomingList = document.getElementById('upcoming-list');
+  var pastList = document.getElementById('past-list');
+
+  var upcoming = [];
+  var past = [];
+
+  cards.forEach(function (card) {
+    var parts = card.dataset.date.split('-');
+    var d = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+    if (d >= today) {
+      upcoming.push({ el: card, d: d });
+    } else {
+      past.push({ el: card, d: d });
+    }
+  });
+
+  upcoming.sort(function (a, b) { return a.d - b.d; });
+  past.sort(function (a, b) { return b.d - a.d; });
+
+  upcoming.forEach(function (item) {
+    item.el.style.display = '';
+    upcomingList.appendChild(item.el);
+  });
+
+  past.forEach(function (item) {
+    item.el.style.display = '';
+    pastList.appendChild(item.el);
+  });
+
+  if (upcoming.length === 0) {
+    document.getElementById('upcoming-empty').style.display = '';
+  }
+
+  var pastToggle = document.getElementById('past-toggle');
+  var pastEmpty = document.getElementById('past-empty');
+
+  if (past.length === 0) {
+    pastEmpty.style.display = '';
+  } else {
+    pastToggle.style.display = '';
+    pastToggle.addEventListener('click', function () {
+      var open = pastList.style.display !== 'none';
+      pastList.style.display = open ? 'none' : '';
+      pastToggle.textContent = open ? 'Vis tidligere' : 'Skjul tidligere';
+    });
+  }
+}());
+</script>
+
+{{ end }}
