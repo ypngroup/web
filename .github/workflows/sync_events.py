@@ -6,6 +6,15 @@ import urllib.request
 
 import yaml
 
+# PyYAML natively serialises ISO date strings (e.g. "2025-04-24") as YAML date
+# scalars without quotes, which Hugo reads as time.Time objects. The data-date
+# attribute then renders as a full timestamp instead of the bare ISO string the
+# JS parser expects. This representer forces all strings to be quoted.
+def _quoted_str_representer(dumper, data):
+    return dumper.represent_scalar("tag:yaml.org,2002:str", data, style='"')
+
+yaml.add_representer(str, _quoted_str_representer)
+
 SHEET_URL = os.environ.get("EVENTS_SHEET_URL", "")
 OUTPUT = "data/events.yaml"
 REQUIRED_COLS = {"title", "date", "time", "location", "type", "description", "signup_url"}

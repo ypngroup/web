@@ -19,12 +19,12 @@
       {{ range .Site.Data.events }}
       <article
         class="event-card flex flex-col bg-white border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
-        data-date="{{ .date }}"
+        data-date="{{ .date | dateFormat "2006-01-02" }}"
         style="display:none">
         <div class="p-6 flex flex-col flex-1">
           <div class="flex items-center justify-between mb-3">
             <p class="text-xs font-heading uppercase tracking-widest text-gray-400">
-              {{ .date | replaceRE "^(\\d{4})-(\\d{2})-(\\d{2})$" "$3.$2.$1" }} kl. {{ .time }}
+              {{ .date | dateFormat "02.01.2006" }} kl. {{ .time }}
             </p>
             {{ if eq .type "public" }}
             <span class="text-xs font-heading uppercase tracking-wider px-2 py-0.5 bg-brand-yellow text-black">Åpent</span>
