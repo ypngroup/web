@@ -1,9 +1,14 @@
-# Testimonials are hidden until real quotes are collected.
-# Add entries here to re-enable the section — no template changes needed.
 # See NETWORK_REVAMP.md for collection guidance and the prompt questions to use.
 #
 # Format:
 # - quote: "..."
 #   name: "Fornavn Etternavn"
+#   title: "Tittel"
 #   employer: "Bedrift AS"
 #   photo: "/wp-content/uploads/..."
+
+- quote: "Det mest verdifulle for min del var nok møtet med topplederene og de samtalene vi fikk mulighet til å ha sammen med dem."
+  name: "Andrea B. Kvam"
+  title: "Head of Strategic Partnership"
+  employer: "Froda"
+  photo: "/wp-content/uploads/network/andrea-b-kvam.jpg"

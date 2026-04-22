@@ -135,7 +135,7 @@
           <img src="{{ .photo }}" alt="{{ .name }}" class="w-12 h-12 rounded-full object-cover flex-shrink-0">
           <div>
             <p class="font-heading font-semibold text-brand-navy text-sm">{{ .name }}</p>
-            <p class="text-gray-500 text-sm">{{ .employer }}</p>
+            <p class="text-gray-500 text-sm">{{ if .title }}{{ .title }}, {{ end }}{{ .employer }}</p>
           </div>
         </div>
       </li>
