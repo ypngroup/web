@@ -5,6 +5,7 @@
   <div class="absolute inset-0 bg-brand-navy/60"></div>
   {{ end }}
   <div class="relative z-10 max-w-3xl mx-auto px-4 pb-12 pt-32 w-full">
+    {{ with .Params.author }}<p class="text-brand-yellow uppercase tracking-widest text-xs font-heading font-normal mb-3">{{ partial "date-no.html" $.Date }} &mdash; Av {{ . }}</p>{{ end }}
     <h1 class="font-heading font-semibold text-3xl md:text-5xl leading-tight text-white">{{ .Title }}</h1>
   </div>
 </section>
