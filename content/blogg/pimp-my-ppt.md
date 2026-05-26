@@ -1,7 +1,7 @@
 ---
 title: "PIMP MY PRESENTATION HACKATHON"
 date: 2024-04-15
-author: "TomAtle"
+author: "Tom-Atle Herland"
 categories: ["Åpen"]
 featured_image: "/wp-content/uploads/2024/04/Pimp-MP-bilde-1024x576.jpg"
 slug: "pimp-my-ppt-presentation-hackathon-storytelling-og-verdibudskap-for-a-inspirere-og-involvere"

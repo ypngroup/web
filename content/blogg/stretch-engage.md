@@ -1,7 +1,7 @@
 ---
 title: "Stretch Engage: En suksesshistorie om brobygging"
 date: 2024-04-27
-author: "TomAtle"
+author: "Tom-Atle Herland"
 categories: ["Åpen"]
 featured_image: "/wp-content/uploads/2024/04/Stretch-bilde-1024x576.jpg"
 slug: "stretch-engage-en-suksesshistorie-om-brobygging"

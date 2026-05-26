@@ -1,7 +1,7 @@
 ---
 title: "Fra advokatfullmektig til konsernsjef i Norges største boligbyggelag; OBOS!"
 date: 2024-09-18
-author: "TomAtle"
+author: "Eirik Lie og Madeleine Storås"
 categories: ["Åpen"]
 featured_image: "/wp-content/uploads/2024/09/Daniel-Siraj-blir-intervjuet-av-Eirik-og-Madeleine-BILDE.jpg"
 slug: "fra-advokatfullmektig-til-konsernsjef-i-norges-storste-boligbyggelag-obos"

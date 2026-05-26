@@ -1,7 +1,6 @@
 ---
 title: "Let AI Run the Show"
 date: 2024-11-20
-author: "YPN Group"
 categories: ["Young Professionals"]
 tags: ["Microsoft", "AI", "Fagsamling"]
 featured_image: "/wp-content/uploads/2024/10/20241021_103337.jpg"
